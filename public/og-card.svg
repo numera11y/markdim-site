@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#f5f6f8"/>
+  <rect x="46" y="46" width="1108" height="538" rx="8" fill="#fff" stroke="#c7cdd6"/>
+  <path d="M48 48h430v534H48z" fill="#fff"/>
+  <path d="M478 48h2v534h-2z" fill="#d9dde3"/>
+  <rect x="82" y="82" width="48" height="48" rx="12" fill="#141923"/>
+  <path d="M93 92l13 5.6c1 .4 1.4 1.1 1.4 2v21.1l-5-2.1v-16l-5.4-2.3v16l-5-2.1V93.3c0-1.2.5-1.6 1.6-1.1Zm26 0-13 5.6c-1 .4-1.4 1.1-1.4 2v21.1l5-2.1v-16l5.4-2.3v16l5-2.1V93.3c0-1.2-.5-1.6-1.6-1.1Z" fill="#98acff"/>
+  <text x="147" y="112" fill="#171a21" font-family="Arial,sans-serif" font-size="27" font-weight="700">Marginalia</text>
+  <text x="82" y="226" fill="#275dad" font-family="Arial,sans-serif" font-size="17" font-weight="600" letter-spacing="2">VOTRE BUREAU MARKDOWN</text>
+  <text x="82" y="302" fill="#171a21" font-family="Georgia,serif" font-size="57">Gardez le fil</text>
+  <text x="82" y="370" fill="#171a21" font-family="Georgia,serif" font-size="57">de vos idées.</text>
+  <text x="82" y="428" fill="#344054" font-family="Arial,sans-serif" font-size="21">Éditez la source. Lisez le résultat.</text>
+  <text x="82" y="461" fill="#344054" font-family="Arial,sans-serif" font-size="21">Exportez en PDF quand c’est prêt.</text>
+  <rect x="82" y="499" width="177" height="46" rx="6" fill="#275dad"/>
+  <text x="105" y="528" fill="#fff" font-family="Arial,sans-serif" font-size="16" font-weight="700">Windows · Linux</text>
+  <rect x="535" y="111" width="575" height="406" rx="7" fill="#eef1f5" stroke="#c7cdd6"/>
+  <rect x="535" y="111" width="575" height="42" rx="7" fill="#fff"/>
+  <path d="M535 153h575" stroke="#c7cdd6"/>
+  <circle cx="557" cy="132" r="5" fill="#c7cdd6"/><circle cx="575" cy="132" r="5" fill="#c7cdd6"/><circle cx="593" cy="132" r="5" fill="#c7cdd6"/>
+  <rect x="535" y="153" width="102" height="364" fill="#eef1f5"/>
+  <path d="M637 153v364m236-364v364" stroke="#c7cdd6"/>
+  <rect x="649" y="176" width="213" height="318" rx="3" fill="#fff"/>
+  <rect x="885" y="176" width="210" height="318" rx="3" fill="#fff"/>
+  <g fill="#344054" font-family="monospace" font-size="12">
+    <text x="665" y="205"># Lire, écrire, relire</text><text x="665" y="236">Une idée prend forme</text><text x="665" y="255">dans son propre fichier.</text><text x="665" y="302">## Garder le fil</text><text x="665" y="333">- Vos documents, réunis</text><text x="665" y="353">- L’aperçu, en direct</text>
+  </g>
+  <text x="907" y="215" fill="#171a21" font-family="Georgia,serif" font-size="20">Lire, écrire, relire</text>
+  <text x="907" y="249" fill="#344054" font-family="Arial,sans-serif" font-size="12">Une idée prend forme dans son propre fichier.</text>
+  <text x="907" y="298" fill="#171a21" font-family="Arial,sans-serif" font-size="14" font-weight="700">Garder le fil</text>
+  <text x="907" y="326" fill="#344054" font-family="Arial,sans-serif" font-size="12">• Vos documents, réunis</text>
+  <text x="907" y="348" fill="#344054" font-family="Arial,sans-serif" font-size="12">• L’aperçu, en direct</text>
+  <rect x="537" y="518" width="570" height="1" fill="#c7cdd6"/>
+  <text x="548" y="544" fill="#475467" font-family="Arial,sans-serif" font-size="11">BÊTA PUBLIQUE · WINDOWS ET LINUX</text>
+</svg>

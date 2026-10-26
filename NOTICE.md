@@ -1,0 +1,5 @@
+# Notices
+
+- The Marginalia logo and name come from the Marginalia application project and are distributed under the repository's MIT license.
+- IBM Plex Sans and IBM Plex Serif are self-hosted from Fontsource packages. IBM Plex fonts are licensed under the SIL Open Font License 1.1; the license is included at `public/licenses/IBMPlex-OFL-1.1.txt`.
+- Phosphor Icons are distributed under the MIT license; the license is included at `public/licenses/Phosphor-MIT.txt`.
