@@ -17,6 +17,10 @@ const faqs = [
     answer: 'Oui. Modifiez directement la source Markdown, relisez le rendu dans l’aperçu en direct, puis enregistrez vos changements.',
   },
   {
+    question: 'Comment agrandir le texte du code Markdown ?',
+    answer: 'Maintenez Ctrl et faites tourner la molette pour zoomer dans le texte de l’éditeur, sans modifier le fichier.',
+  },
+  {
     question: 'Pourquoi utiliser Marginalia si mon IDE affiche déjà les .md ?',
     answer: 'Gardez votre IDE pour le code. Marginalia rassemble autour du document la bibliothèque, l’édition de la source, l’aperçu en direct et l’export PDF.',
   },
@@ -195,7 +199,8 @@ const faqSchema = {
         <div class="grid gap-0 sm:grid-cols-2 sm:gap-x-10">
         <div class="border-t border-rule py-5"><h3 class="font-semibold">Choisissez vos panneaux</h3><p class="mt-2 leading-6 text-muted">Affichez ou repliez la bibliothèque, l’éditeur et l’aperçu. Redimensionnez-les selon le document ouvert.</p></div>
         <div class="border-t border-rule py-5"><h3 class="font-semibold">Reprenez où vous étiez</h3><p class="mt-2 leading-6 text-muted">Marginalia mémorise les dimensions et la disposition que vous préférez.</p></div>
-        <div class="border-t border-rule py-5"><h3 class="font-semibold">Lisez en clair ou en sombre</h3><p class="mt-2 leading-6 text-muted">Choisissez un thème clair ou sombre et ajustez la taille du texte de l’éditeur.</p></div>
+        <div class="border-t border-rule py-5"><h3 class="font-semibold">Zoomez sur la source Markdown</h3><p class="mt-2 leading-6 text-muted">Maintenez <kbd class="rounded border border-rule bg-paper px-1.5 py-0.5 text-xs">Ctrl</kbd> et tournez la molette pour agrandir ou réduire le texte de l’éditeur, sans toucher au fichier.</p></div>
+        <div class="border-t border-rule py-5"><h3 class="font-semibold">Choisissez votre thème</h3><p class="mt-2 leading-6 text-muted">Passez du mode clair au mode sombre selon votre préférence.</p></div>
         <div class="border-t border-rule py-5"><h3 class="font-semibold">Ouvrez vos fichiers facilement</h3><p class="mt-2 leading-6 text-muted">Sur Windows, ajoutez Marginalia au menu « Ouvrir avec » pour les fichiers Markdown.</p></div>
         <div class="border-t border-rule py-5"><h3 class="font-semibold">Suivez le texte avec précision</h3><p class="mt-2 leading-6 text-muted">L’éditeur affiche les numéros de ligne et permet de rendre visibles espaces, tabulations et fins de ligne. Dans l’aperçu, les blocs de code sont colorés et numérotés.</p></div>
       </div>
