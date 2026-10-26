@@ -1,33 +1,35 @@
 ---
 name: Marginalia Site
-description: An editorial desk for understanding and trying the Marginalia Markdown workspace.
+description: A lively dark launch page for Marginalia, the free open-source Markdown desktop app.
 colors:
-  paper: "#f5f6f8"
-  page: "#ffffff"
-  ink: "#171a21"
-  muted: "#344054"
-  secondary: "#475467"
-  rule: "#c7cdd6"
-  wash: "#eef1f5"
-  accent: "#275dad"
-  mark: "#98acff"
-  selection: "#dce5ff"
-  accent-hover: "#1f4f9d"
-  dark-copy: "#e1e5ec"
-  dark-label: "#c7d2fe"
+  paper: "#141820"
+  page: "#1C222C"
+  ink: "#E6EAF0"
+  muted: "#D0D6E0"
+  secondary: "#B1BBC9"
+  rule: "#343C49"
+  wash: "#252D39"
+  accent: "#A3B8FF"
+  mark: "#98ACFF"
+  on-accent: "#141820"
+  accent-hover: "#B6C7FF"
+  capture-border: "#4A5670"
+  capture-text: "#C5D1FF"
+  feature-hover: "#65779D"
+  download-panel: "#191F29"
 typography:
   display:
-    fontFamily: "IBM Plex Serif, Georgia, serif"
-    fontSize: "4.15rem"
-    fontWeight: 500
-    lineHeight: 1.02
-    letterSpacing: "-0.045em"
+    fontFamily: "IBM Plex Sans Variable, sans-serif"
+    fontSize: "3rem / 3.75rem (sm) / 6rem (lg)"
+    fontWeight: 600
+    lineHeight: 0.98
+    letterSpacing: "-0.055em"
   headline:
-    fontFamily: "IBM Plex Serif, Georgia, serif"
+    fontFamily: "IBM Plex Sans Variable, sans-serif"
     fontSize: "2.25rem / 3rem (sm)"
-    fontWeight: 500
+    fontWeight: 600
     lineHeight: 1.25
-    letterSpacing: "-0.045em"
+    letterSpacing: "-0.055em"
   body:
     fontFamily: "IBM Plex Sans Variable, sans-serif"
     fontSize: "16px"
@@ -35,14 +37,25 @@ typography:
     lineHeight: 1.5
   label:
     fontFamily: "IBM Plex Sans Variable, sans-serif"
+    fontSize: "12px"
+    fontWeight: 500
+    lineHeight: 1.5
+    letterSpacing: "0.08em"
+  compact-label:
+    fontFamily: "IBM Plex Sans Variable, sans-serif"
     fontSize: "10px"
-    fontWeight: 600
-    letterSpacing: "0.12em"
+    fontWeight: 500
+    letterSpacing: "0.05em"
+  state-marker:
+    fontFamily: "IBM Plex Sans Variable, sans-serif"
+    fontSize: "1.3rem"
+    fontWeight: 400
 rounded:
-  sm: "4px"
+  sm: "5px"
   md: "6px"
   lg: "8px"
-  menu: "5px"
+  xl: "12px"
+  focus: "3px"
 spacing:
   xs: "4px"
   sm: "8px"
@@ -53,26 +66,19 @@ spacing:
 components:
   button-primary:
     backgroundColor: "{colors.accent}"
-    textColor: "{colors.page}"
+    textColor: "{colors.on-accent}"
     typography: "{typography.body}"
     rounded: "{rounded.md}"
     padding: "12px 20px"
     height: "48px"
   button-primary-hover:
     backgroundColor: "{colors.accent-hover}"
-    textColor: "{colors.page}"
+    textColor: "{colors.on-accent}"
     rounded: "{rounded.md}"
-  button-download-inverse:
+  button-menu:
     backgroundColor: "{colors.page}"
     textColor: "{colors.ink}"
-    typography: "{typography.body}"
     rounded: "{rounded.md}"
-    padding: "12px 20px"
-    height: "48px"
-  button-menu:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.menu}"
     size: "44px"
     height: "44px"
 ---
@@ -81,110 +87,124 @@ components:
 
 ## Overview
 
-**Creative North Star: "Le bureau ouvert"**
+**Creative North Star: "The Midnight Launchpad"**
 
-The site presents Marginalia as an editorial atelier: a clear, quiet working surface where the idea of the application is understood by seeing Markdown source and its rendered reading view together. Pale pearl paper, white sheets, slate ink, and the logo's blue accent carry the identity. The editorial serif supplies a reading voice; sans-serif interface labels and copy keep the interface precise and usable.
+Marginalia's site is a modern, dark, lively product launch: confident and polished, with the actual application—not decorative campaign art—as its proof. Deep blue-charcoal surfaces, cool readable text, fine slate borders, and Marginalia's periwinkle accents carry the app identity. IBM Plex Sans Variable handles the complete typographic voice, from oversized launch headline to compact route labels.
 
-The signature composition is an open folio: concise explanation and a direct beta action face a real capture of the Marginalia application, showing its Markdown editor and live preview. The screenshot uses an authored local sample document and is cropped to exclude machine-specific file paths. Fine rules and restrained shadows organize the page without turning it into a generic card grid. Responsive behavior stacks the folio around the image on narrow screens.
+The first view centers the direct “Lire. Écrire. Exporter.” promise and free-download action above a genuine, clickable dark-mode application capture. A short animated signal traces Écrire → Relire → PDF. Below, rule-separated asymmetrical feature rows and ruled preference panes explain the product without generic card grids. Brief entrance and route motion add energy; reduced-motion preference disables animation and transitions.
 
 **Key Characteristics:**
-- Pearl-gray page ground with white paper surfaces and slate typography.
-- Blue is reserved for actions, links, selected states, and small markers.
-- Editorial serif headlines paired with IBM Plex Sans interface text and a genuine application capture.
-- Folio composition, thin rules, and restrained depth.
+- Dark product palette and legible cool-toned copy.
+- Periwinkle actions and one animated workflow signal.
+- One self-hosted sans-serif family across display, body, and labels.
+- Real application capture above asymmetric, rule-separated feature rows.
 
 ## Colors
 
-The palette follows the slate-and-blue Marginalia mark: cool paper and ink provide the field, while one clear blue identifies action and orientation.
+The palette follows the shipped dark application theme: blue-charcoal surfaces, readable slate-white type, and a periwinkle accent for action, focus, and orientation.
 
 ### Primary
-- **Logo Blue** (`{colors.accent}`): primary actions, links, selected tabs, small icons, and informational markers.
+- **Periwinkle Accent** (`{colors.accent}`): download actions, links, icons, focus outlines, selection, and the route marker.
+- **Logo Periwinkle** (`{colors.mark}`): the logo's secondary blue mark.
+- **Accent Hover** (`{colors.accent-hover}`): brighter hover state for actions and text links.
 
 ### Neutral
-- **Pearl Paper** (`{colors.paper}`): the page ground and light keyboard-key surfaces.
-- **White Sheet** (`{colors.page}`): demo window, reading panes, and alternating content sections.
-- **Slate Ink** (`{colors.ink}`): primary text and the dark download panel.
-- **Reading Slate** (`{colors.muted}`): body copy and explanatory text.
-- **Quiet Slate** (`{colors.secondary}`): secondary copy, metadata, and labels.
-- **Rule Gray** (`{colors.rule}`): dividers, borders, and panel separators.
-- **Soft Wash** (`{colors.wash}`): subdued labels and pale interface surfaces.
-- **Logo Periwinkle** (`{colors.mark}`): secondary mark color, also used for the focus outline on the dark download panel.
-- **Selection Blue** (`{colors.selection}`): selected text background.
-- **Action Blue Hover** (`{colors.accent-hover}`): primary action and text-link hover.
-- **Download Copy** (`{colors.dark-copy}`): supporting copy on the dark download panel.
-- **Download Label** (`{colors.dark-label}`): emphasized introductory line on the dark panel.
+- **Night Ground** (`{colors.paper}`): site background and the dark text color used on filled accent controls.
+- **Charcoal Surface** (`{colors.page}`): header/menu controls, image zoom control, and alternating page panels.
+- **Primary Text** (`{colors.ink}`): headings and primary interface copy.
+- **Supporting Text** (`{colors.muted}`): feature explanations and FAQ answers.
+- **Quiet Text** (`{colors.secondary}`): compatibility metadata and screenshot caption.
+- **Slate Rule** (`{colors.rule}`): header, feature, FAQ, panel, and capture borders.
+- **Elevated Wash** (`{colors.wash}`): muted inline key surfaces.
+- **Capture Border Blue** (`{colors.capture-border}`): zoom-control outline and workflow tracks.
+- **Capture Sample Blue** (`{colors.capture-text}`): supporting text on the zoom affordance.
+- **Feature Hover Slate** (`{colors.feature-hover}`): brighter feature-row rule on hover.
+- **Download Charcoal** (`{colors.download-panel}`): closing download panel.
+- **On Accent** (`{colors.on-accent}`): dark foreground on the periwinkle action fill.
 
 ## Typography
 
-**Display Font:** IBM Plex Serif (with Georgia, serif fallback)
+**Display Font:** IBM Plex Sans Variable (with sans-serif fallback)
 **Body Font:** IBM Plex Sans Variable (with sans-serif fallback)
-**Label/Mono Font:** IBM Plex Sans Variable for interface labels; system monospace stack is visible inside the captured Markdown source pane.
+**Label/Mono Font:** IBM Plex Sans Variable for web labels; monospaced content appears only within the real application capture.
 
-**Character:** IBM Plex Serif gives large headings a literary, print-like voice without decorative excess. IBM Plex Sans keeps navigation, descriptions, controls, and small annotations direct and legible.
+**Character:** A single self-hosted family keeps the launch page product-led and consistent. Oversized scale, semibold weight, close tracking, and tight leading distinguish display text without introducing a separate brand face.
 
 ### Hierarchy
-- **Display** (500, 48px base, 60px at `sm`, 66.4px at `lg`, 1.02 line-height): large hero title; tightly tracked with balanced wrapping.
-- **Headline** (500, 36px base, 48px at `sm`, 1.25 line-height): section titles and secondary editorial statements.
-- **Title** (500, 20px–24px): titles inside the rendered Markdown preview.
-- **Body** (400, 16px, default 1.5 line-height): explanatory prose; individual prose classes set their own leading, and long copy is constrained to a 68ch reading measure where appropriate.
-- **Label** (600, 10px, 0.12em tracking, uppercase in demo pane captions): compact source/preview and section annotations.
+- **Display** (600, 48px base, 60px at `sm`, 96px at `lg`, 0.98 line-height): centered hero promise, balanced within a 16ch measure.
+- **Headline** (600, 36px base, 48px at `sm`, 1.25 line-height): section titles.
+- **Title** (600, 20px): feature-row headings.
+- **Body** (400, 16px default, 1.5 line-height): standard copy; specific content classes use their own leading, commonly 1.7 for prose.
+- **Label** (500, 12px desktop / 10px compact, 0.08em / 0.05em tracking, uppercase): workflow stages.
+- **State marker** (400, 1.3rem): decorative plus/minus FAQ disclosure indicator.
 
 ## Layout
 
-Content uses a centered maximum-width frame of 80rem (max-w-7xl), with page gutters that grow from 20px on small screens to 32px and 48px at larger viewport widths. Section vertical rhythm uses 64px on compact layouts, 80px at medium widths, and up to 96px on wide layouts. Text columns use a 68ch measure.
+Content sits in a centered 80rem maximum-width frame with 20px compact gutters, 32px at `sm`, and 48px at `lg`. The hero uses a centered maximum-64rem text group above a full-width application capture, up to the 80rem container width. The primary download and secondary feature link sit together, followed by platform availability and the three-step route.
 
-The hero folio is a bordered, gently rounded two-part sheet. On wide screens its explanatory side and application screenshot use an approximately 0.76:1.24 column ratio; the subtle central fold and light-to-white surface gradient reinforce the open-folio composition. At widths up to 900px the fold disappears and the copy and screenshot stack. At up to 680px story rows become single-column and desktop navigation gives way to a compact disclosure menu. The app capture scales as one image without changing its aspect ratio. Other responsive behavior is limited to the specific column and padding changes present in the layout. The page supports a 320px minimum viewport without horizontal overflow.
-
-Observed responsive thresholds are 680px, 900px, and the utility framework's `sm` (640px) and `lg` (1024px) layout changes.
+The feature introduction divides evenly at `md`; its four rows use icon, title, and copy in asymmetric columns. The preference section places a heading beside stacked ruled rows. Local-file and download content use wide editorial alignments; FAQ uses a narrow heading column beside disclosure rows. At 900px the hero copy gains a bottom rule. At 680px desktop links collapse into native details navigation and route gaps/tracks shrink; the application capture scales proportionally at its 1606:952 aspect ratio. The page supports a 320px minimum width. Tailwind layout breakpoints used include `sm` (640px), `md` (768px), and `lg` (1024px).
 
 ## Elevation & Depth
 
-Depth is restrained and mostly structural: thin gray rules and white-on-paper tonal shifts do most of the work. Shadows distinguish the large folio, its captured application image frame, and the opened mobile navigation menu from their surroundings; they are soft and broad rather than sharp.
+The interface combines tonal dark surfaces with fine borders and strong, broad shadow around the real app capture. The screenshot frame's inset accent hairline adds a subtle illuminated edge; the zoom affordance and open mobile menu receive smaller structural shadows. Feature rows stay flat and are organized by rules.
 
 ### Shadow Vocabulary
-- **Folio ambient** (`0 16px 44px rgb(23 26 33 / 9%)`): separates the hero sheet from the page ground.
-- **Application image frame** (`0 12px 28px rgb(23 26 33 / 10%)`): lifts the genuine application capture within the folio.
-- **Capture enlarge control** (`0 4px 10px rgb(23 26 33 / 12%)`): keeps the mobile full-resolution action visible over the screenshot.
-- **Mobile menu** (`0 12px 28px rgb(23 26 33 / 12%)`): distinguishes the open navigation disclosure.
+- **Application capture** (`0 28px 72px rgb(0 0 0 / 34%), 0 1px 0 rgb(163 184 255 / 12%) inset`): gives the authentic product image its primary lift and inset edge.
+- **Zoom affordance** (`0 4px 16px rgb(0 0 0 / 32%)`): separates the enlarge control from screenshot detail.
+- **Mobile menu** (`0 16px 36px rgb(0 0 0 / 36%)`): lifts the open navigation disclosure.
+- **Workflow marker** (`0 0 12px rgb(163 184 255 / 72%)`): glows around the animated route dot.
 
 ## Shapes
 
-The form language is mostly square-edged editorial paper with modest rounding at contained interactive or application surfaces. Common radii are 5px for the compact menu control, 6px for action buttons and large panels, and 8px for the application capture frame. Borders are thin and cool gray; panes meet at straight rules. Circular shapes are limited to small accent markers and the PDF icon medallion. Keyboard focus outlines are 3px thick; this is a stroke width, not a corner radius.
+Corners remain controlled rather than pill-shaped: actions and menu trigger use 6px, mobile dropdown uses 8px, screenshot/download panels use 12px, and the focus outline corner is 3px. Hairline borders divide dark panes. The route connector is 1px with a 6px circular signal marker. Global focus uses a 3px accent outline with a 4px offset.
 
 ## Components
 
 ### Buttons
-- **Character:** direct, legible actions with a compact, confident blue fill.
-- **Shape:** softly rounded corners (6px); primary controls are at least 48px high, and the header action at least 44px.
-- **Primary:** logo blue with white semibold text and 20px horizontal padding; used for beta download.
-- **Hover / Focus:** hover deepens the blue; keyboard focus uses a 3px blue outline with 4px offset and a 3px outline corner. Links gain underline emphasis on hover.
-- **Inverse download:** white surface with ink text on the dark closing panel; hover shifts to a pale gray.
-- **Secondary link:** unboxed blue text link, often accompanied by an arrow; underline appears on hover.
-- **Mobile menu control:** transparent paper-ground button, gray 1px border, 5px radius, minimum 44px square.
+- **Character:** compact, direct actions with a bright accent fill and dark legible foreground.
+- **Shape:** gently rounded (6px); hero action is at least 48px high and header action at least 44px.
+- **Primary:** accent fill, on-accent text, semibold sans-serif, and 20px horizontal padding; hover changes to the brighter accent-hover color.
+- **Focus:** 3px accent outline with 4px offset; text links strengthen their underline on hover.
+- **Secondary action:** unboxed feature link beside the download action.
+- **Screenshot zoom:** bordered surface over the image with Phosphor magnifier icon and 44px minimum height; opens the original image in a new tab.
 
 ### Navigation
-- **Style:** compact header with logo at left, three quiet section links, and a prominent download action at right. Sans-serif links use muted slate and darken on hover.
-- **Mobile:** at 680px and below, section links are placed inside a native `details` disclosure; the 44px menu control opens a white, bordered, softly shadowed vertical menu. The download action remains visible in the header.
+- **Style:** compact dark header, Marginalia logo, three section links, and always-visible download action. Links are muted at rest and brighten on hover.
+- **Mobile:** at 680px and below, section links move into a native `details` disclosure. The surface-colored trigger is at least 44px square; the open 17rem menu is bordered, 8px rounded, and shadowed.
+
+### Feature Rows
+- **Style:** four flat, bottom-ruled rows with accent Phosphor icon, semibold title, and muted copy. At `md`, icon/title/copy occupy asymmetric columns.
+- **Hover:** rule brightens and row shifts 4px horizontally, with 220ms ease transitions.
+
+### Download Panel
+- **Style:** wide, bordered dark panel with 12px corners, large display title, muted compatibility copy, and a primary release action. The copy explicitly distinguishes Windows/Linux beta packages from the project's macOS target.
 
 ### FAQ
-- **Style:** native disclosure rows separated by top and bottom hairlines; question text is medium-weight sans-serif.
-- **State:** each summary has a minimum 60px height. A blue plus marks the closed state and changes to a minus when open; answer copy uses muted slate, 1.7 line-height, and the standard reading measure.
+- **Style:** native `details` rows with thin top/bottom rules and 60px minimum question height.
+- **State:** blue plus changes to minus when open; answers use muted text, 1.7 leading, and a 68ch maximum measure. The MDViewer comparison remains a factual FAQ answer, not a visual endorsement pattern.
 
-### Open Folio
-- **Style:** signature hero composition with white copy paper and a real Marginalia editor/preview screenshot in the second pane. On desktop a subtle fold separates the halves; at compact widths the copy and capture stack into paper and wash-gray areas.
-- **Application capture:** 8px frame corners, thin gray stroke, genuine source editor, live rendered preview, and visible document tabs. The crop excludes the library's absolute file path and the window status strip; a visible 44px enlarge control opens the screenshot at its original resolution on mobile.
-- **Annotation:** a short caption identifies the image as an application capture with a local sample document.
+### Application Capture
+- **Style:** genuine dark-mode application screenshot in a 12px clipped frame with a slate border, broad shadow, and subtle inset highlight.
+- **Interaction:** complete image is a zoom-in link to original size; a lower-right magnifier action makes that available on touch. Caption identifies the local example document.
+
+### Workflow Route
+- **Style:** centered uppercase Écrire → Relire → PDF labels connected by fine tracks and a glowing six-pixel accent marker.
+- **Motion:** hero copy enters over 760ms; capture enters over 900ms after a 100ms delay. Route signal travels for 3.2s with a 350ms offset on the second track. Under reduced motion, animation, transitions, and smooth scrolling are disabled.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** preserve the pearl-paper, slate-ink, and logo-blue relationship across new site elements.
-- **Do** use IBM Plex Serif for editorial display headings and IBM Plex Sans for interface and body text.
-- **Do** use thin gray rules and white surfaces to structure content before adding depth.
-- **Do** keep labels and annotations compact and legible; uppercase demo captions use the established tracking.
-- **Do** stack the folio copy and screenshot at the documented breakpoint, preserving the screenshot's aspect ratio.
+- **Do** keep site color tokens aligned with `global.css`; use the shipped app palette as the identity source.
+- **Do** lead with the real dark-mode application capture and preserve its aspect ratio.
+- **Do** reserve the bright accent for actions, focus, links, and workflow signal.
+- **Do** structure feature content with asymmetric rows and rules rather than generic card grids.
+- **Do** preserve reduced-motion behavior and native disclosure semantics.
+- **Do** state platform targets separately from currently available beta packages.
+- **Do** keep the OpenCode use case secondary to everyday Markdown editing.
 
 ### Don't:
-- **Don't** use the blue accent as a broad page background; its observed role is action, link, selection, and small orientation cues.
-- **Don't** replace the open-folio composition with a grid of generic rounded cards.
-- **Don't** rely on shadow alone where the implementation uses a clear rule or pane boundary.
+- **Don't** reintroduce the previous light paper/editorial palette.
+- **Don't** fabricate an application screenshot or imply a macOS beta package is currently published.
+- **Don't** position AI as the product's main purpose.
+- **Don't** turn the factual MDViewer comparison into a claim that Marginalia alone can edit or export Markdown.
+- **Don't** remove the animated route or make motion ignore reduced-motion preferences.

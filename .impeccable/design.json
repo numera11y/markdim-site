@@ -1,39 +1,51 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-26T15:34:05.052Z",
+  "generatedAt": "2026-10-26T22:08:53.404Z",
   "title": "Design System: Marginalia Site",
   "extensions": {
     "colorMeta": {
-      "paper": { "role": "neutral", "displayName": "Pearl Paper", "canonical": "#f5f6f8", "tonalRamp": ["#25272a", "#414449", "#5e6267", "#7c8187", "#9b9fa4", "#b9bdc2", "#d8dade", "#f5f6f8"] },
-      "page": { "role": "neutral", "displayName": "White Sheet", "canonical": "#ffffff", "tonalRamp": ["#262626", "#434343", "#606060", "#7d7d7d", "#9b9b9b", "#b9b9b9", "#d8d8d8", "#ffffff"] },
-      "ink": { "role": "neutral", "displayName": "Slate Ink", "canonical": "#171a21", "tonalRamp": ["#14161b", "#31343a", "#4f5259", "#6d7076", "#8b8d92", "#aaabae", "#cacacc", "#e9e9e9"] },
-      "muted": { "role": "neutral", "displayName": "Reading Slate", "canonical": "#344054", "tonalRamp": ["#191c23", "#363941", "#555861", "#747780", "#93969e", "#b3b5bb", "#d4d5d9", "#f5f5f7"] },
-      "secondary": { "role": "neutral", "displayName": "Quiet Slate", "canonical": "#475467", "tonalRamp": ["#1d1f24", "#3b3e44", "#5a5d64", "#797c83", "#999ba1", "#b9bbc0", "#d9dade", "#fafafa"] },
-      "rule": { "role": "neutral", "displayName": "Rule Gray", "canonical": "#c7cdd6", "tonalRamp": ["#1c1d1f", "#393b3e", "#57595d", "#76787c", "#95979b", "#b5b7bb", "#d6d8dc", "#f7f9ff"] },
-      "wash": { "role": "neutral", "displayName": "Soft Wash", "canonical": "#eef1f5", "tonalRamp": ["#252627", "#414346", "#5e6165", "#7c7f84", "#9a9da2", "#b9bbc0", "#d8dade", "#f7faff"] },
-      "accent": { "role": "primary", "displayName": "Logo Blue", "canonical": "#275dad", "tonalRamp": ["#061732", "#0a2c5c", "#104184", "#1c57a3", "#3970b8", "#5f8aca", "#89a7dc", "#b8c9ee"] },
-      "mark": { "role": "primary", "displayName": "Logo Periwinkle", "canonical": "#98acff", "tonalRamp": ["#1b1d30", "#343955", "#4e567a", "#6974a0", "#8492c6", "#a0b0ed", "#bdcaff", "#dce4ff"] },
-      "selection": { "role": "primary", "displayName": "Selection Blue", "canonical": "#dce5ff", "tonalRamp": ["#181c26", "#343a4b", "#51596f", "#6e7893", "#8d99b8", "#acbadc", "#cbd8ff", "#eaf0ff"] },
-      "accent-hover": { "role": "primary", "displayName": "Action Blue Hover", "canonical": "#1f4f9d", "tonalRamp": ["#06142b", "#092750", "#0e3a75", "#174f96", "#3368ad", "#5882c2", "#83a0d8", "#b4c4ed"] },
-      "dark-copy": { "role": "neutral", "displayName": "Download Copy", "canonical": "#e1e5ec", "tonalRamp": ["#1d1e1f", "#3a3c3f", "#585a5e", "#77797e", "#96989d", "#b6b8bd", "#d7d9de", "#f8fcff"] },
-      "dark-label": { "role": "primary", "displayName": "Download Label", "canonical": "#c7d2fe", "tonalRamp": ["#191a24", "#35394c", "#525873", "#70779c", "#8f97c4", "#afb8ed", "#d0d7ff", "#f1f4ff"] }
+      "paper": { "role": "neutral", "displayName": "Night Ground", "canonical": "#141820", "tonalRamp": ["#101114", "#292b30", "#42454b", "#5d6068", "#797d85", "#979aa2", "#b6b9c0", "#d6d8dd"] },
+      "page": { "role": "neutral", "displayName": "Charcoal Surface", "canonical": "#1C222C", "tonalRamp": ["#111214", "#2a2d33", "#43474f", "#5f636c", "#7b8089", "#999da6", "#b8bbc3", "#d8dade"] },
+      "ink": { "role": "neutral", "displayName": "Primary Text", "canonical": "#E6EAF0", "tonalRamp": ["#202122", "#3d3e41", "#5b5c60", "#797b80", "#999ba0", "#b9bbc0", "#d9dbe0", "#fafcff"] },
+      "muted": { "role": "neutral", "displayName": "Supporting Text", "canonical": "#D0D6E0", "tonalRamp": ["#1b1c1e", "#383a3e", "#56595e", "#74777e", "#93969d", "#b2b5bc", "#d2d5dc", "#f2f5fc"] },
+      "secondary": { "role": "neutral", "displayName": "Quiet Text", "canonical": "#B1BBC9", "tonalRamp": ["#161718", "#333538", "#51545a", "#70737a", "#8f929a", "#afb2ba", "#cfd2da", "#eff2fa"] },
+      "rule": { "role": "neutral", "displayName": "Slate Rule", "canonical": "#343C49", "tonalRamp": ["#111214", "#2a2d33", "#43474e", "#5f636b", "#7b8088", "#999da5", "#b8bbc3", "#d8dade"] },
+      "wash": { "role": "neutral", "displayName": "Elevated Wash", "canonical": "#252D39", "tonalRamp": ["#101113", "#292c31", "#43464e", "#5e626a", "#7b7f87", "#999ca4", "#b8bbc3", "#d8d9df"] },
+      "accent": { "role": "primary", "displayName": "Periwinkle Accent", "canonical": "#A3B8FF", "tonalRamp": ["#20202a", "#3b3d50", "#575b77", "#747ba0", "#929bc8", "#b0bdf0", "#ccd7ff", "#e9efff"] },
+      "mark": { "role": "primary", "displayName": "Logo Periwinkle", "canonical": "#98ACFF", "tonalRamp": ["#1d1e2a", "#383a50", "#545977", "#7179a0", "#8f99c8", "#adbbf0", "#cbd6ff", "#e8eeff"] },
+      "on-accent": { "role": "neutral", "displayName": "On Accent", "canonical": "#141820", "tonalRamp": ["#101114", "#292b30", "#42454b", "#5d6068", "#797d85", "#979aa2", "#b6b9c0", "#d6d8dd"] },
+      "accent-hover": { "role": "primary", "displayName": "Accent Hover", "canonical": "#B6C7FF", "tonalRamp": ["#25252d", "#41434f", "#5e6274", "#7b8299", "#999fbe", "#b8c2e3", "#d7e0ff", "#f4f7ff"] },
+      "capture-border": { "role": "neutral", "displayName": "Capture Border Blue", "canonical": "#4A5670", "tonalRamp": ["#151617", "#323438", "#50545b", "#6f737b", "#8e929a", "#aeb2ba", "#ced2da", "#eff2fa"] },
+      "capture-text": { "role": "primary", "displayName": "Capture Sample Blue", "canonical": "#C5D1FF", "tonalRamp": ["#28282e", "#44464f", "#616473", "#7f8497", "#9ea4bb", "#bdc5df", "#dce4ff", "#f9fbff"] },
+      "feature-hover": { "role": "neutral", "displayName": "Feature Hover Slate", "canonical": "#65779D", "tonalRamp": ["#1a1b1f", "#373a41", "#555a65", "#737989", "#9298ac", "#b1b8ce", "#d1d8f0", "#f1f5ff"] },
+      "download-panel": { "role": "neutral", "displayName": "Download Charcoal", "canonical": "#191F29", "tonalRamp": ["#101113", "#292c31", "#42464d", "#5d626a", "#7a7f87", "#989ca4", "#b7bac2", "#d7d9df"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Editorial Display", "purpose": "Large hero and section titles." },
-      "headline": { "displayName": "Editorial Headline", "purpose": "Secondary large section statements." },
-      "body": { "displayName": "Interface Sans", "purpose": "Body copy, navigation, and interface text." },
-      "label": { "displayName": "Annotated Label", "purpose": "Small, tracked demo-pane captions." }
+      "display": { "displayName": "Launch Display", "purpose": "Oversized centered hero promise." },
+      "headline": { "displayName": "Section Display", "purpose": "Feature and support section headings." },
+      "body": { "displayName": "Product Sans", "purpose": "All site copy, controls, and navigation." },
+      "label": { "displayName": "Workflow Label", "purpose": "Uppercase workflow-stage labels at regular width." },
+      "compact-label": { "displayName": "Compact Workflow Label", "purpose": "Reduced-size uppercase workflow labels below the compact breakpoint." },
+      "state-marker": { "displayName": "Disclosure State Marker", "purpose": "Decorative FAQ plus/minus indicator." }
     },
     "shadows": [
-      { "name": "folio-ambient", "value": "0 16px 44px rgb(23 26 33 / 9%)", "purpose": "Separates the hero folio from the page ground." },
-      { "name": "application-capture-frame", "value": "0 12px 28px rgb(23 26 33 / 10%)", "purpose": "Lifts the actual application screenshot in the folio." },
-      { "name": "capture-zoom-control", "value": "0 4px 10px rgb(23 26 33 / 12%)", "purpose": "Keeps the full-resolution capture action visible over the screenshot." },
-      { "name": "mobile-menu", "value": "0 12px 28px rgb(23 26 33 / 12%)", "purpose": "Separates the opened compact navigation." }
+      { "name": "application-capture", "value": "0 28px 72px rgb(0 0 0 / 34%), 0 1px 0 rgb(163 184 255 / 12%) inset", "purpose": "Anchors the genuine app screenshot." },
+      { "name": "capture-zoom", "value": "0 4px 16px rgb(0 0 0 / 32%)", "purpose": "Separates the enlarge action from image detail." },
+      { "name": "mobile-menu", "value": "0 16px 36px rgb(0 0 0 / 36%)", "purpose": "Elevates opened compact navigation." },
+      { "name": "workflow-marker", "value": "0 0 12px rgb(163 184 255 / 72%)", "purpose": "Glows around the moving workflow dot." }
+    ],
+    "motion": [
+      { "name": "hero-arrive", "value": "760ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Hero copy moves from 16px below into place." },
+      { "name": "capture-arrive", "value": "900ms 100ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Capture entrance follows the copy with a short delay." },
+      { "name": "route-signal", "value": "3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate", "purpose": "Periwinkle marker travels the workflow track; second marker is delayed 350ms." },
+      { "name": "feature-hover", "value": "220ms ease", "purpose": "Feature row border and 4px horizontal shift." },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion: reduce; animation: none; transition: none", "purpose": "Turns off motion and smooth scrolling for reduced-motion preference." }
     ],
     "breakpoints": [
       { "name": "sm", "value": "640px" },
-      { "name": "mobile-layout", "value": "680px" },
-      { "name": "tablet-layout", "value": "900px" },
+      { "name": "md", "value": "768px" },
+      { "name": "compact-navigation", "value": "680px" },
+      { "name": "hero-copy-rule", "value": "900px" },
       { "name": "lg", "value": "1024px" }
     ]
   },
@@ -42,69 +54,72 @@
       "name": "Primary Download Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Blue beta-download action used in the header and hero.",
-      "html": "<a class=\"ds-button-primary\" href=\"https://github.com/numera11y/Marginalia/releases/latest\">Télécharger la bêta <svg class=\"ds-icon\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M5 3h8v8M13 3 6 10M11 9v4H3V5h4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
-      "css": ".ds-button-primary { display: inline-flex; min-height: 48px; align-items: center; gap: 8px; padding: 12px 20px; border: 0; border-radius: 6px; background: #275dad; color: #fff; font: 600 16px/1.5 'IBM Plex Sans Variable', sans-serif; text-decoration: none; transition: background-color 160ms ease; } .ds-button-primary:hover { background: #1f4f9d; } .ds-button-primary:focus-visible { outline: 3px solid #275dad; outline-offset: 4px; } .ds-button-primary:active { background: #1f4f9d; }"
+      "description": "Periwinkle free-download action in the hero, header, and download panel.",
+      "html": "<a class=\"ds-button-primary\" href=\"https://github.com/numera11y/Marginalia/releases/latest\">Télécharger gratuitement <svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M4 12 12 4M5 4h7v7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-button-primary { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; border: 0; border-radius: 6px; background: #A3B8FF; color: #141820; font: 600 16px/1.5 'IBM Plex Sans Variable', sans-serif; text-decoration: none; transition: background-color 160ms ease; } .ds-button-primary svg { display: block; width: 16px; height: 16px; } .ds-button-primary:hover { background: #B6C7FF; } .ds-button-primary:focus-visible { outline: 3px solid #A3B8FF; outline-offset: 4px; } .ds-button-primary:active { background: #B6C7FF; }"
     },
     {
-      "name": "Inverse Download Button",
-      "kind": "button",
-      "refersTo": "button-download-inverse",
-      "description": "White high-contrast download action on the dark closing panel.",
-      "html": "<a class=\"ds-button-inverse\" href=\"https://github.com/numera11y/Marginalia/releases/latest\">Choisir ma version <svg class=\"ds-icon\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M5 3h8v8M13 3 6 10M11 9v4H3V5h4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
-      "css": ".ds-button-inverse { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; border-radius: 6px; background: #fff; color: #171a21; font: 600 16px/1.5 'IBM Plex Sans Variable', sans-serif; text-decoration: none; transition: background-color 160ms ease; } .ds-button-inverse:hover { background: #e6eaf1; } .ds-button-inverse:focus-visible { outline: 3px solid #98acff; outline-offset: 4px; } .ds-button-inverse:active { background: #e6eaf1; }"
-    },
-    {
-      "name": "Site Navigation",
+      "name": "Desktop Navigation",
       "kind": "nav",
-      "description": "Quiet desktop section links paired with a persistent download action.",
+      "description": "Section links in muted text plus the persistent release action.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Navigation principale\"><a href=\"#fonctionnalites\">Fonctionnalités</a><a href=\"#compatibilite\">Compatibilité</a><a href=\"#questions\">Questions</a></nav>",
-      "css": ".ds-nav { display: flex; align-items: center; gap: 28px; font: 400 14px/1.5 'IBM Plex Sans Variable', sans-serif; color: #344054; } .ds-nav a { display: inline-flex; min-height: 44px; align-items: center; color: inherit; text-decoration: none; } .ds-nav a:hover { color: #171a21; } .ds-nav a:focus-visible { outline: 3px solid #275dad; outline-offset: 4px; border-radius: 3px; }"
+      "css": ".ds-nav { display: flex; align-items: center; gap: 28px; color: #D0D6E0; font: 400 14px/1.5 'IBM Plex Sans Variable', sans-serif; } .ds-nav a { display: inline-flex; min-height: 44px; align-items: center; color: inherit; text-decoration: none; } .ds-nav a:hover { color: #E6EAF0; } .ds-nav a:focus-visible { outline: 3px solid #A3B8FF; outline-offset: 4px; border-radius: 3px; }"
     },
     {
-      "name": "Marginalia Application Capture",
+      "name": "Mobile Menu Trigger",
+      "kind": "button",
+      "refersTo": "button-menu",
+      "description": "44px surface control for the compact native details navigation.",
+      "html": "<button class=\"ds-menu-toggle\" type=\"button\" aria-label=\"Afficher la navigation\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\"><path d=\"M4 6h16M4 12h16M4 18h16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\"/></svg></button>",
+      "css": ".ds-menu-toggle { display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; border: 1px solid #343C49; border-radius: 6px; background: #1C222C; color: #E6EAF0; } .ds-menu-toggle:hover { background: #252D39; } .ds-menu-toggle:focus-visible { outline: 3px solid #A3B8FF; outline-offset: 4px; } .ds-menu-toggle:active { background: #252D39; } .ds-menu-toggle svg { display: block; }"
+    },
+    {
+      "name": "Application Screenshot",
       "kind": "custom",
-      "description": "Actual application capture with a local Markdown sample; the crop excludes machine-specific path details.",
-      "html": "<figure class=\"ds-app-capture\"><a href=\"https://numera11y.github.io/marginalia-site/images/marginalia-workspace.webp\" aria-label=\"Ouvrir la capture en taille originale\"><img src=\"https://numera11y.github.io/marginalia-site/images/marginalia-workspace.webp\" alt=\"Marginalia's Markdown editor and live preview\" width=\"1606\" height=\"952\"><span class=\"ds-zoom\"><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><circle cx=\"6.5\" cy=\"6.5\" r=\"4\" fill=\"none\" stroke=\"currentColor\"/><path d=\"m10 10 4 4m-7.5-7.5h4m-2-2v4\" fill=\"none\" stroke=\"currentColor\"/></svg> Agrandir</span></a><figcaption>Capture réelle de l’application avec un document local d’exemple.</figcaption></figure>",
-      "css": ".ds-app-capture { margin: 0; overflow: hidden; border: 1px solid #c7cdd6; border-radius: 8px; background: #fff; box-shadow: 0 12px 28px rgb(23 26 33 / 10%); } .ds-app-capture a { position: relative; display: block; cursor: zoom-in; } .ds-app-capture img { display: block; width: 100%; height: auto; } .ds-app-capture .ds-zoom { position: absolute; right: 12px; bottom: 12px; display: inline-flex; min-height: 44px; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid #c7cdd6; border-radius: 6px; background: #fff; color: #275dad; font: 600 12px/1.5 'IBM Plex Sans Variable', sans-serif; box-shadow: 0 4px 10px rgb(23 26 33 / 12%); } .ds-app-capture .ds-zoom svg { width: 16px; height: 16px; } .ds-app-capture figcaption { margin-top: 12px; color: #475467; font: 400 12px/1.5 'IBM Plex Sans Variable', sans-serif; }"
+      "description": "Genuine dark app capture with zoom action and original-image link.",
+      "html": "<figure class=\"ds-app-capture\"><a href=\"https://numera11y.github.io/marginalia-site/images/marginalia-workspace.webp\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Ouvrir la capture réelle en taille originale\"><img src=\"https://numera11y.github.io/marginalia-site/images/marginalia-workspace.webp\" alt=\"Marginalia dark-mode Markdown editor and rendered preview\" width=\"1606\" height=\"952\"><span class=\"ds-zoom\"><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><circle cx=\"6.5\" cy=\"6.5\" r=\"4\" fill=\"none\" stroke=\"currentColor\"/><path d=\"m10 10 4 4m-7.5-7.5h4m-2-2v4\" fill=\"none\" stroke=\"currentColor\"/></svg> Agrandir</span></a><figcaption>Capture réelle de l’application avec un document local d’exemple.</figcaption></figure>",
+      "css": ".ds-app-capture { margin: 0; overflow: hidden; border: 1px solid #343C49; border-radius: 12px; background: #1C222C; box-shadow: 0 28px 72px rgb(0 0 0 / 34%), 0 1px 0 rgb(163 184 255 / 12%) inset; } .ds-app-capture a { position: relative; display: block; cursor: zoom-in; } .ds-app-capture img { display: block; width: 100%; height: auto; } .ds-app-capture .ds-zoom { position: absolute; right: 12px; bottom: 12px; display: inline-flex; min-height: 44px; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid #4A5670; border-radius: 6px; background: #1C222C; color: #A3B8FF; font: 600 12px/1.5 'IBM Plex Sans Variable', sans-serif; box-shadow: 0 4px 16px rgb(0 0 0 / 32%); } .ds-app-capture .ds-zoom svg { display: block; width: 16px; height: 16px; } .ds-app-capture a:focus-visible { outline: 3px solid #A3B8FF; outline-offset: -3px; } .ds-app-capture figcaption { margin-top: 12px; color: #B1BBC9; font: 400 12px/1.5 'IBM Plex Sans Variable', sans-serif; }"
+    },
+    {
+      "name": "Workflow Route",
+      "kind": "custom",
+      "description": "Compact three-stage route with a moving periwinkle signal on each connector.",
+      "html": "<ol class=\"ds-workflow\" aria-label=\"Parcours du Markdown\"><li>Écrire</li><li class=\"ds-track\" aria-hidden=\"true\"></li><li>Relire</li><li class=\"ds-track\" aria-hidden=\"true\"></li><li>PDF</li></ol>",
+      "css": ".ds-workflow { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 0; padding: 0; color: #B1BBC9; font: 500 12px/1.5 'IBM Plex Sans Variable', sans-serif; letter-spacing: .08em; text-transform: uppercase; list-style: none; } .ds-track { position: relative; width: clamp(28px, 6vw, 72px); height: 1px; flex: 0 1 auto; background: #4A5670; } .ds-track::after { position: absolute; top: -2.5px; left: 0; width: 6px; height: 6px; border-radius: 50%; background: #A3B8FF; box-shadow: 0 0 12px rgb(163 184 255 / 72%); content: ''; animation: ds-flow-signal 3.2s cubic-bezier(.4, 0, .2, 1) infinite alternate; } .ds-track:nth-of-type(2)::after { animation-delay: 350ms; } @keyframes ds-flow-signal { from { left: 0; } to { left: calc(100% - 6px); } } @media (max-width: 680px) { .ds-workflow { gap: 8px; font-size: 10px; letter-spacing: .05em; } .ds-track { width: clamp(16px, 7vw, 28px); } } @media (prefers-reduced-motion: reduce) { .ds-track::after { animation: none; } }"
     },
     {
       "name": "FAQ Disclosure",
       "kind": "custom",
-      "description": "Hairline-separated native disclosure question with a plus/minus state cue.",
-      "html": "<details class=\"ds-faq\"><summary>Marginalia modifie-t-il mes fichiers Markdown ?</summary><p>Vous choisissez quand enregistrer les modifications et où exporter votre PDF.</p></details>",
-      "css": ".ds-faq { border-top: 1px solid #c7cdd6; font-family: 'IBM Plex Sans Variable', sans-serif; } .ds-faq:last-child { border-bottom: 1px solid #c7cdd6; } .ds-faq summary { display: flex; min-height: 60px; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; color: #171a21; font-size: 16px; font-weight: 500; } .ds-faq summary::-webkit-details-marker { display: none; } .ds-faq summary::after { color: #275dad; content: '+'; font-size: 21px; } .ds-faq[open] summary::after { content: '−'; } .ds-faq p { max-width: 68ch; margin: 0; padding: 0 0 20px; color: #344054; line-height: 1.7; } .ds-faq summary:focus-visible { outline: 3px solid #275dad; outline-offset: 4px; border-radius: 3px; }"
-    },
-    {
-      "name": "Mobile Menu Control",
-      "kind": "button",
-      "refersTo": "button-menu",
-      "description": "Compact 44px disclosure trigger used when desktop navigation collapses.",
-      "html": "<button class=\"ds-menu-toggle\" type=\"button\" aria-label=\"Afficher la navigation\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\"><path d=\"M4 6h16M4 12h16M4 18h16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\"/></svg></button>",
-      "css": ".ds-menu-toggle { display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; border: 1px solid #c7cdd6; border-radius: 5px; background: transparent; color: #171a21; } .ds-menu-toggle:hover { background: #eef1f5; } .ds-menu-toggle:focus-visible { outline: 3px solid #275dad; outline-offset: 4px; } .ds-menu-toggle:active { background: #eef1f5; }"
+      "description": "Native details disclosure with an accent plus/minus state marker.",
+      "html": "<details class=\"ds-faq\"><summary>En quoi Marginalia diffère de MDViewer ?</summary><p>Les deux ouvrent, éditent et exportent des fichiers Markdown. Marginalia publie son code sous MIT et propose une bêta publique Linux en plus de Windows.</p></details>",
+      "css": ".ds-faq { border-top: 1px solid #343C49; font-family: 'IBM Plex Sans Variable', sans-serif; } .ds-faq:last-child { border-bottom: 1px solid #343C49; } .ds-faq summary { display: flex; min-height: 60px; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; color: #E6EAF0; font-size: 16px; font-weight: 500; } .ds-faq summary::-webkit-details-marker { display: none; } .ds-faq summary::after { color: #A3B8FF; content: '+'; font-size: 1.3rem; } .ds-faq[open] summary::after { content: '−'; } .ds-faq p { max-width: 68ch; margin: 0; padding: 0 0 20px; color: #D0D6E0; line-height: 1.7; } .ds-faq summary:focus-visible { outline: 3px solid #A3B8FF; outline-offset: 4px; border-radius: 3px; }"
     }
   ],
   "narrative": {
-    "northStar": "Le bureau ouvert",
-    "overview": "The site presents Marginalia as an editorial atelier: a clear working surface where visitors see a genuine capture of the Markdown editor and rendered reading view. Pale pearl paper, white sheets, slate ink, and the logo's blue accent carry the identity. The editorial serif supplies a reading voice; sans-serif interface labels and copy keep the interface precise and usable.\n\nThe signature composition is an open folio: concise explanation and a direct beta action face the actual application. The capture contains an authored local sample document and is cropped to exclude machine-specific path details. Fine rules and restrained shadows organize the page without turning it into a generic card grid. Responsive behavior stacks the folio copy and screenshot while preserving the image's aspect ratio.",
+    "northStar": "The Midnight Launchpad",
+    "overview": "Marginalia's site is a modern, dark, lively product launch: confident and polished, with the actual application—not decorative campaign art—as its proof. Deep blue-charcoal surfaces, cool readable text, fine slate borders, and Marginalia's periwinkle accents carry the app identity. IBM Plex Sans Variable handles the complete typographic voice, from oversized launch headline to compact route labels.\n\nThe first view centers the direct “Lire. Écrire. Exporter.” promise and free-download action above a genuine, clickable dark-mode application capture. A short animated signal traces Écrire → Relire → PDF. Below, rule-separated asymmetrical feature rows and ruled preference panes explain the product without generic card grids. Brief entrance and route motion add energy; reduced-motion preference disables animation and transitions.",
     "keyCharacteristics": [
-      "Pearl-gray page ground with white paper surfaces and slate typography.",
-      "Blue is reserved for actions, links, selected states, and small markers.",
-      "Editorial serif headlines paired with IBM Plex Sans interface text.",
-      "Folio composition, real application capture, thin rules, and restrained depth."
+      "Dark product palette and legible cool-toned copy.",
+      "Periwinkle actions and one animated workflow signal.",
+      "One self-hosted sans-serif family across display, body, and labels.",
+      "Real application capture above asymmetric, rule-separated feature rows."
     ],
     "rules": [],
     "dos": [
-      "Do preserve the pearl-paper, slate-ink, and logo-blue relationship across new site elements.",
-      "Do use IBM Plex Serif for editorial display headings and IBM Plex Sans for interface and body text.",
-      "Do use thin gray rules and white surfaces to structure content before adding depth.",
-      "Do keep labels and annotations compact and legible; uppercase demo captions use the established tracking.",
-      "Do stack the folio copy and screenshot at the documented breakpoint while preserving the screenshot's aspect ratio."
+      "Do keep site color tokens aligned with `global.css`; use the shipped app palette as the identity source.",
+      "Do lead with the real dark-mode application capture and preserve its aspect ratio.",
+      "Do reserve the bright accent for actions, focus, links, and workflow signal.",
+      "Do structure feature content with asymmetric rows and rules rather than generic card grids.",
+      "Do preserve reduced-motion behavior and native disclosure semantics.",
+      "Do state platform targets separately from currently available beta packages.",
+      "Do keep the OpenCode use case secondary to everyday Markdown editing."
     ],
     "donts": [
-      "Don't use the blue accent as a broad page background; its observed role is action, link, selection, and small orientation cues.",
-      "Don't replace the open-folio composition with a grid of generic rounded cards.",
-      "Don't rely on shadow alone where the implementation uses a clear rule or pane boundary."
+      "Don't reintroduce the previous light paper/editorial palette.",
+      "Don't fabricate an application screenshot or imply a macOS beta package is currently published.",
+      "Don't position AI as the product's main purpose.",
+      "Don't turn the factual MDViewer comparison into a claim that Marginalia alone can edit or export Markdown.",
+      "Don't remove the animated route or make motion ignore reduced-motion preferences."
     ]
   }
 }
