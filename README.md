@@ -23,4 +23,4 @@ npm run preview
 
 Le workflow GitHub Actions `.github/workflows/deploy.yml` construit le site et le publie sur GitHub Pages à chaque mise à jour de `main`. Les versions de l’application continuent d’être publiées par le dépôt markdim principal; les boutons de téléchargement de ce site pointent vers ces releases.
 
-URL Pages prévue : <https://numera11y.github.io/markdim-site/>.
+URL Pages : <https://numera11y.github.io/markdim-site/>.
