@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-10-26T22:08:53.404Z",
-  "title": "Design System: Marginalia Site",
+  "title": "Design System: markdim Site",
   "extensions": {
     "colorMeta": {
       "paper": { "role": "neutral", "displayName": "Night Ground", "canonical": "#141820", "tonalRamp": ["#101114", "#292b30", "#42454b", "#5d6068", "#797d85", "#979aa2", "#b6b9c0", "#d6d8dd"] },
@@ -55,7 +55,7 @@
       "kind": "button",
       "refersTo": "button-primary",
       "description": "Periwinkle free-download action in the hero, header, and download panel.",
-      "html": "<a class=\"ds-button-primary\" href=\"https://github.com/numera11y/Marginalia/releases/latest\">Télécharger gratuitement <svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M4 12 12 4M5 4h7v7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "html": "<a class=\"ds-button-primary\" href=\"https://github.com/numera11y/markdim/releases/latest\">Télécharger gratuitement <svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M4 12 12 4M5 4h7v7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
       "css": ".ds-button-primary { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; border: 0; border-radius: 6px; background: #A3B8FF; color: #141820; font: 600 16px/1.5 'IBM Plex Sans Variable', sans-serif; text-decoration: none; transition: background-color 160ms ease; } .ds-button-primary svg { display: block; width: 16px; height: 16px; } .ds-button-primary:hover { background: #B6C7FF; } .ds-button-primary:focus-visible { outline: 3px solid #A3B8FF; outline-offset: 4px; } .ds-button-primary:active { background: #B6C7FF; }"
     },
     {
@@ -91,13 +91,13 @@
       "name": "FAQ Disclosure",
       "kind": "custom",
       "description": "Native details disclosure with an accent plus/minus state marker.",
-      "html": "<details class=\"ds-faq\"><summary>En quoi Marginalia diffère de MDViewer ?</summary><p>Les deux ouvrent, éditent et exportent des fichiers Markdown. Marginalia publie son code sous MIT et propose une bêta publique Linux en plus de Windows.</p></details>",
+      "html": "<details class=\"ds-faq\"><summary>En quoi markdim diffère de MDViewer ?</summary><p>Les deux ouvrent, éditent et exportent des fichiers Markdown. markdim publie son code sous MIT et propose une bêta publique Linux en plus de Windows.</p></details>",
       "css": ".ds-faq { border-top: 1px solid #343C49; font-family: 'IBM Plex Sans Variable', sans-serif; } .ds-faq:last-child { border-bottom: 1px solid #343C49; } .ds-faq summary { display: flex; min-height: 60px; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; color: #E6EAF0; font-size: 16px; font-weight: 500; } .ds-faq summary::-webkit-details-marker { display: none; } .ds-faq summary::after { color: #A3B8FF; content: '+'; font-size: 1.3rem; } .ds-faq[open] summary::after { content: '−'; } .ds-faq p { max-width: 68ch; margin: 0; padding: 0 0 20px; color: #D0D6E0; line-height: 1.7; } .ds-faq summary:focus-visible { outline: 3px solid #A3B8FF; outline-offset: 4px; border-radius: 3px; }"
     }
   ],
   "narrative": {
     "northStar": "The Midnight Launchpad",
-    "overview": "Marginalia's site is a modern, dark, lively product launch: confident and polished, with the actual application—not decorative campaign art—as its proof. Deep blue-charcoal surfaces, cool readable text, fine slate borders, and Marginalia's periwinkle accents carry the app identity. IBM Plex Sans Variable handles the complete typographic voice, from oversized launch headline to compact route labels.\n\nThe first view centers the direct “Lire. Écrire. Exporter.” promise and free-download action above a genuine, clickable dark-mode application capture. A short animated signal traces Écrire → Relire → PDF. Below, rule-separated asymmetrical feature rows and ruled preference panes explain the product without generic card grids. Brief entrance and route motion add energy; reduced-motion preference disables animation and transitions.",
+    "overview": "markdim's site is a modern, dark, lively product launch: confident and polished, with the actual application—not decorative campaign art—as its proof. Deep blue-charcoal surfaces, cool readable text, fine slate borders, and markdim's periwinkle accents carry the app identity. IBM Plex Sans Variable handles the complete typographic voice, from oversized launch headline to compact route labels.\n\nThe first view centers the direct “Lire. Écrire. Exporter.” promise and free-download action above a genuine, clickable dark-mode application capture. A short animated signal traces Écrire → Relire → PDF. Below, rule-separated asymmetrical feature rows and ruled preference panes explain the product without generic card grids. Brief entrance and route motion add energy; reduced-motion preference disables animation and transitions.",
     "keyCharacteristics": [
       "Dark product palette and legible cool-toned copy.",
       "Periwinkle actions and one animated workflow signal.",
@@ -118,7 +118,7 @@
       "Don't reintroduce the previous light paper/editorial palette.",
       "Don't fabricate an application screenshot or imply a macOS beta package is currently published.",
       "Don't position AI as the product's main purpose.",
-      "Don't turn the factual MDViewer comparison into a claim that Marginalia alone can edit or export Markdown.",
+      "Don't turn the factual MDViewer comparison into a claim that markdim alone can edit or export Markdown.",
       "Don't remove the animated route or make motion ignore reduced-motion preferences."
     ]
   }

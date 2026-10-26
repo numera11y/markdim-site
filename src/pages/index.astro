@@ -1,16 +1,16 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 
-const releaseUrl = 'https://github.com/numera11y/Marginalia/releases/latest';
-const repositoryUrl = 'https://github.com/numera11y/Marginalia';
+const releaseUrl = 'https://github.com/numera11y/markdim/releases/latest';
+const repositoryUrl = 'https://github.com/numera11y/markdim';
 const basePath = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
 
 const faqs = [
   {
-    question: 'Marginalia est-il gratuit ?',
-    answer: 'Oui. Marginalia est open source sous licence MIT et les versions bêta sont téléchargeables gratuitement, sans compte ni abonnement.',
+    question: 'markdim est-il gratuit ?',
+    answer: 'Oui. markdim est open source sous licence MIT et les versions bêta sont téléchargeables gratuitement, sans compte ni abonnement.',
   },
   {
     question: 'Puis-je créer un fichier .md ou modifier un fichier existant ?',
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: 'Mes fichiers restent-ils sur mon ordinateur ?',
-    answer: 'Oui. Marginalia travaille avec vos fichiers locaux et n’ajoute ni compte en ligne, ni synchronisation cloud, ni télémétrie.',
+    answer: 'Oui. markdim travaille avec vos fichiers locaux et n’ajoute ni compte en ligne, ni synchronisation cloud, ni télémétrie.',
   },
   {
     question: 'Puis-je ouvrir un fichier .md produit par OpenCode ?',
@@ -41,8 +41,8 @@ const faqs = [
     answer: 'Maintenez Ctrl et faites tourner la molette pour zoomer dans le texte de l’éditeur, sans modifier le fichier.',
   },
   {
-    question: 'En quoi Marginalia diffère de MDViewer ?',
-    answer: 'Les deux ouvrent, éditent et exportent des fichiers Markdown. MDViewer est distribué via le Microsoft Store pour Windows. Marginalia publie son code sous MIT, propose une bêta publique Linux en plus de Windows et permet de régler les panneaux bibliothèque, éditeur et aperçu.',
+    question: 'En quoi markdim diffère de MDViewer ?',
+    answer: 'Les deux ouvrent, éditent et exportent des fichiers Markdown. MDViewer est distribué via le Microsoft Store pour Windows. markdim publie son code sous MIT, propose une bêta publique Linux en plus de Windows et permet de régler les panneaux bibliothèque, éditeur et aperçu.',
     link: 'https://apps.microsoft.com/detail/9NXLXLZ198SK',
     linkLabel: 'Voir la fiche officielle de MDViewer',
   },
@@ -87,11 +87,11 @@ const faqSchema = {
 
       <figure class="hero-capture mx-auto mt-10 max-w-7xl sm:mt-14">
         <div class="application-capture-frame">
-          <a class="relative block cursor-zoom-in" href={`${basePath}images/marginalia-workspace.webp`} target="_blank" rel="noreferrer" aria-label="Ouvrir la capture réelle de Marginalia en taille originale">
+          <a class="relative block cursor-zoom-in" href={`${basePath}images/markdim-workspace.webp`} target="_blank" rel="noreferrer" aria-label="Ouvrir la capture réelle de markdim en taille originale">
             <img
               class="block h-auto w-full"
-              src={`${basePath}images/marginalia-workspace.webp`}
-              alt="Capture réelle de Marginalia en mode sombre : source Markdown à gauche et aperçu rendu à droite."
+              src={`${basePath}images/markdim-workspace.webp`}
+              alt="Capture réelle de markdim en mode sombre : source Markdown à gauche et aperçu rendu à droite."
               width="1606"
               height="952"
               decoding="async"
@@ -157,7 +157,7 @@ const faqSchema = {
         </article>
         <article class="grid gap-2 py-5 sm:grid-cols-[0.7fr_1.3fr] sm:gap-8">
           <h3 class="font-semibold">Ouvrez plus vite.</h3>
-          <p class="leading-6 text-muted">Sous Windows, ajoutez Marginalia au menu « Ouvrir avec » pour vos fichiers Markdown.</p>
+          <p class="leading-6 text-muted">Sous Windows, ajoutez markdim au menu « Ouvrir avec » pour vos fichiers Markdown.</p>
         </article>
       </div>
     </div>
@@ -167,7 +167,7 @@ const faqSchema = {
     <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1fr_auto] md:items-end">
       <div>
         <h2 class="display-title max-w-[14ch] text-4xl leading-tight sm:text-5xl">Vos fichiers restent à vous.</h2>
-        <p class="reading-measure mt-5 text-lg leading-7 text-muted">Marginalia travaille avec vos fichiers locaux. Sans compte, sans synchronisation cloud et sans télémétrie. Son code source est public sous licence MIT.</p>
+        <p class="reading-measure mt-5 text-lg leading-7 text-muted">markdim travaille avec vos fichiers locaux. Sans compte, sans synchronisation cloud et sans télémétrie. Son code source est public sous licence MIT.</p>
       </div>
       <a class="inline-flex min-h-11 items-center gap-2 font-medium text-accent underline decoration-transparent underline-offset-4 hover:decoration-current" href={repositoryUrl} target="_blank" rel="noreferrer">Voir le code source <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
     </div>
@@ -176,7 +176,7 @@ const faqSchema = {
   <section id="compatibilite" class="px-5 pb-16 sm:px-8 sm:pb-20 lg:px-12">
     <div class="download-panel mx-auto grid max-w-7xl gap-8 rounded-xl px-6 py-9 sm:px-10 sm:py-12 md:grid-cols-[1fr_auto] md:items-center lg:px-14">
       <div>
-        <h2 class="display-title max-w-[16ch] text-3xl leading-tight sm:text-4xl">Téléchargez Marginalia.</h2>
+        <h2 class="display-title max-w-[16ch] text-3xl leading-tight sm:text-4xl">Téléchargez markdim.</h2>
         <p class="mt-4 max-w-[58ch] leading-7 text-muted">Éditeur gratuit et open source. Bêtas publiques pour Windows et Linux; le projet cible aussi macOS. Vérifiez les paquets et notes de version avant l’installation.</p>
       </div>
       <a class="inline-flex min-h-12 items-center justify-center gap-2 self-start rounded-md bg-accent px-5 py-3 font-semibold text-on-accent no-underline transition-colors hover:bg-accent-hover md:self-center" href={releaseUrl} target="_blank" rel="noreferrer">Télécharger gratuitement <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>

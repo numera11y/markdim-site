@@ -4,7 +4,7 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://numera11y.github.io',
-  base: '/marginalia-site',
+  base: '/markdim-site',
   trailingSlash: 'always',
   integrations: [sitemap()],
   vite: {

@@ -16,11 +16,11 @@ People who create, receive, read, or maintain Markdown files on their computer, 
 
 ## Product Purpose
 
-Marginalia is a free desktop application for opening, creating, editing, organizing, reading, and exporting local Markdown documents. Success means the user can move from an existing `.md` file to a revised document or PDF without moving the source into a web service.
+markdim is a free desktop application for opening, creating, editing, organizing, reading, and exporting local Markdown documents. Success means the user can move from an existing `.md` file to a revised document or PDF without moving the source into a web service.
 
 ## Positioning
 
-A local desktop workspace that puts the Markdown source, live rendered preview, file library, and PDF export together. Marginalia is open source under the MIT license and the project targets Windows, macOS, and Linux. Public beta packages are currently available for Windows and Linux.
+A local desktop workspace that puts the Markdown source, live rendered preview, file library, and PDF export together. markdim is open source under the MIT license and the project targets Windows, macOS, and Linux. Public beta packages are currently available for Windows and Linux.
 
 ## Operating Context
 
@@ -32,10 +32,10 @@ Confirmed capabilities: local files and folders, library search and outline, reo
 
 ## Evidence on Hand
 
-- The application source and current feature list are in the parent Marginalia repository: <https://github.com/numera11y/Marginalia>.
-- The actual application screenshot used on this site is `public/images/marginalia-workspace.webp`; its origin is recorded alongside the raster.
-- The logo mark is shipped as `public/marginalia.svg`.
-- The independent website repository deploys to <https://numera11y.github.io/marginalia-site/>.
+- The application source and current feature list are in the markdim repository: <https://github.com/numera11y/markdim>.
+- The actual application screenshot used on this site is `public/images/markdim-workspace.webp`; its origin is recorded alongside the raster.
+- The logo mark is shipped as `public/markdim.svg`.
+- The independent website repository deploys to <https://numera11y.github.io/markdim-site/>.
 
 ## Product Principles
 

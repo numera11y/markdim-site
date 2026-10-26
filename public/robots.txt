@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://numera11y.github.io/marginalia-site/sitemap-index.xml
+Sitemap: https://numera11y.github.io/markdim-site/sitemap-index.xml

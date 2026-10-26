@@ -1,6 +1,6 @@
 ---
-name: Marginalia Site
-description: A lively dark launch page for Marginalia, the free open-source Markdown desktop app.
+name: markdim Site
+description: A lively dark launch page for markdim, the free open-source Markdown desktop app.
 colors:
   paper: "#141820"
   page: "#1C222C"
@@ -83,13 +83,13 @@ components:
     height: "44px"
 ---
 
-# Design System: Marginalia Site
+# Design System: markdim Site
 
 ## Overview
 
 **Creative North Star: "The Midnight Launchpad"**
 
-Marginalia's site is a modern, dark, lively product launch: confident and polished, with the actual application—not decorative campaign art—as its proof. Deep blue-charcoal surfaces, cool readable text, fine slate borders, and Marginalia's periwinkle accents carry the app identity. IBM Plex Sans Variable handles the complete typographic voice, from oversized launch headline to compact route labels.
+markdim's site is a modern, dark, lively product launch: confident and polished, with the actual application—not decorative campaign art—as its proof. Deep blue-charcoal surfaces, cool readable text, fine slate borders, and markdim's periwinkle accents carry the app identity. IBM Plex Sans Variable handles the complete typographic voice, from oversized launch headline to compact route labels.
 
 The first view centers the direct “Lire. Écrire. Exporter.” promise and free-download action above a genuine, clickable dark-mode application capture. A short animated signal traces Écrire → Relire → PDF. Below, rule-separated asymmetrical feature rows and ruled preference panes explain the product without generic card grids. Brief entrance and route motion add energy; reduced-motion preference disables animation and transitions.
 
@@ -169,7 +169,7 @@ Corners remain controlled rather than pill-shaped: actions and menu trigger use 
 - **Screenshot zoom:** bordered surface over the image with Phosphor magnifier icon and 44px minimum height; opens the original image in a new tab.
 
 ### Navigation
-- **Style:** compact dark header, Marginalia logo, three section links, and always-visible download action. Links are muted at rest and brighten on hover.
+- **Style:** compact dark header, markdim logo, three section links, and always-visible download action. Links are muted at rest and brighten on hover.
 - **Mobile:** at 680px and below, section links move into a native `details` disclosure. The surface-colored trigger is at least 44px square; the open 17rem menu is bordered, 8px rounded, and shadowed.
 
 ### Feature Rows
@@ -206,5 +206,5 @@ Corners remain controlled rather than pill-shaped: actions and menu trigger use 
 - **Don't** reintroduce the previous light paper/editorial palette.
 - **Don't** fabricate an application screenshot or imply a macOS beta package is currently published.
 - **Don't** position AI as the product's main purpose.
-- **Don't** turn the factual MDViewer comparison into a claim that Marginalia alone can edit or export Markdown.
+- **Don't** turn the factual MDViewer comparison into a claim that markdim alone can edit or export Markdown.
 - **Don't** remove the animated route or make motion ignore reduced-motion preferences.

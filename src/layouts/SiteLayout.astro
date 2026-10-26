@@ -7,7 +7,7 @@ interface Props {
 }
 
 const {
-  title = 'Marginalia — éditeur Markdown gratuit et open source',
+  title = 'markdim — éditeur Markdown gratuit et open source',
   description = 'Éditeur Markdown de bureau gratuit et open source pour lire, écrire, modifier et exporter vos fichiers .md. Bêtas publiques Windows et Linux; le projet cible aussi macOS.',
 } = Astro.props;
 
@@ -15,13 +15,13 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
 const canonical = new URL(basePath, Astro.site);
-const releaseUrl = 'https://github.com/numera11y/Marginalia/releases/latest';
-const repositoryUrl = 'https://github.com/numera11y/Marginalia';
+const releaseUrl = 'https://github.com/numera11y/markdim/releases/latest';
+const repositoryUrl = 'https://github.com/numera11y/markdim';
 
 const applicationSchema = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'Marginalia',
+  name: 'markdim',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'Windows, Linux',
   description,
@@ -37,9 +37,9 @@ const applicationSchema = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Marginalia',
+  name: 'markdim',
   url: canonical.href,
-  logo: new URL(`${basePath}marginalia.svg`, Astro.site).href,
+  logo: new URL(`${basePath}markdim.svg`, Astro.site).href,
   sameAs: [repositoryUrl],
 };
 ---
@@ -53,12 +53,12 @@ const organizationSchema = {
     <meta name="description" content={description} />
     <meta name="theme-color" content="#141820" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <link rel="icon" type="image/svg+xml" href={`${basePath}marginalia.svg`} />
+    <link rel="icon" type="image/svg+xml" href={`${basePath}markdim.svg`} />
     <link rel="canonical" href={canonical.href} />
     <link rel="sitemap" type="application/xml" href={`${basePath}sitemap-index.xml`} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
-    <meta property="og:site_name" content="Marginalia" />
+    <meta property="og:site_name" content="markdim" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical.href} />
@@ -78,9 +78,9 @@ const organizationSchema = {
     <a class="skip-link" href="#contenu">Aller au contenu</a>
     <header class="site-header">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8 lg:px-12">
-        <a class="flex min-h-11 items-center gap-2 no-underline" href={basePath} aria-label="Marginalia, accueil">
-          <img class="h-[30px] w-[30px] sm:h-[34px] sm:w-[34px]" src={`${basePath}marginalia.svg`} width="34" height="34" alt="" />
-          <span class="text-base font-semibold tracking-tight sm:text-lg">Marginalia</span>
+        <a class="flex min-h-11 items-center gap-2 no-underline" href={basePath} aria-label="markdim, accueil">
+          <img class="h-[30px] w-[30px] sm:h-[34px] sm:w-[34px]" src={`${basePath}markdim.svg`} width="34" height="34" alt="" />
+          <span class="text-base font-semibold tracking-tight sm:text-lg">markdim</span>
         </a>
         <nav class="flex items-center gap-3" aria-label="Navigation principale">
           <div class="desktop-nav-links flex items-center gap-7 text-sm text-muted">
@@ -111,8 +111,8 @@ const organizationSchema = {
       <div class="mx-auto grid max-w-7xl gap-8 px-5 py-9 sm:grid-cols-[1fr_auto] sm:items-end sm:px-8 lg:px-12">
         <div>
           <a class="inline-flex items-center gap-2.5 font-semibold no-underline" href={basePath}>
-            <img src={`${basePath}marginalia.svg`} width="29" height="29" alt="" />
-            Marginalia
+            <img src={`${basePath}markdim.svg`} width="29" height="29" alt="" />
+            markdim
           </a>
           <p class="mt-2 max-w-prose text-sm leading-6 text-muted">Un espace de bureau pour lire, éditer et exporter vos documents Markdown.</p>
         </div>
