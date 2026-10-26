@@ -1,4 +1,4 @@
 {
-  "prompt": "Origin: screenshot captured from the Marginalia application itself, built from the repository source, launched with --debug-capture --debug-theme=light and the synthetic document .impeccable/review/marginalia-demo.md. Cropped x=314 y=30 to 1606x952 to exclude the local file path and status bar; converted to WebP at quality 90.",
-  "createdAt": "2026-10-26T15:24:50.130Z"
+  "prompt": "Origin: screenshot captured from the Marginalia application built from repository source, launched with --debug-capture --debug-theme=light and the authored synthetic document .impeccable/review/compte-rendu.md. Cropped x=314 y=30 to 1606x952 to exclude the local file path and status bar; encoded as WebP quality 90.",
+  "createdAt": "2026-10-26T19:46:35.362Z"
 }

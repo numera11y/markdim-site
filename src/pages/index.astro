@@ -9,28 +9,36 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
 
 const faqs = [
   {
-    question: 'Marginalia modifie-t-il mes fichiers Markdown ?',
-    answer: 'Marginalia ouvre les fichiers Markdown présents sur votre ordinateur. Vous choisissez quand enregistrer les modifications et où exporter votre PDF.',
+    question: 'Puis-je ouvrir un fichier .md produit par OpenCode ?',
+    answer: 'Oui. Ouvrez un fichier .md ou .markdown comme n’importe quel autre fichier. Pas de conversion ni d’import spécial : cela fonctionne aussi avec les sorties d’autres agents IA.',
   },
   {
-    question: 'Quelles versions puis-je télécharger aujourd’hui ?',
-    answer: 'Les préversions publiques sont actuellement disponibles pour Windows et Linux. Le projet est conçu pour Windows, macOS et Linux; consultez les releases pour voir les paquets publiés et leurs notes de version.',
+    question: 'Puis-je modifier le texte généré par l’agent ?',
+    answer: 'Oui. Modifiez directement la source Markdown, relisez le rendu dans l’aperçu en direct, puis enregistrez vos changements.',
   },
   {
-    question: 'Quels éléments Markdown puis-je relire ?',
-    answer: 'L’aperçu prend en charge CommonMark et les extensions avancées de Markdig, dont tableaux, listes imbriquées, tâches, liens, images et blocs de code colorés.',
+    question: 'Pourquoi utiliser Marginalia si mon IDE affiche déjà les .md ?',
+    answer: 'Gardez votre IDE pour le code. Marginalia rassemble autour du document la bibliothèque, l’édition de la source, l’aperçu en direct et l’export PDF.',
   },
   {
-    question: 'Puis-je exporter un document en PDF ?',
-    answer: 'Oui. L’export PDF est intégré à l’application et fonctionne depuis le même espace que l’éditeur et l’aperçu.',
+    question: 'Marginalia est-il gratuit ?',
+    answer: 'Oui. Marginalia est open source sous licence MIT et les versions bêta sont téléchargeables gratuitement. Pas de compte ni d’abonnement.',
   },
   {
-    question: 'Marginalia envoie-t-il mes documents dans le cloud ?',
-    answer: 'Non. Les documents s’ouvrent depuis vos fichiers locaux; Marginalia ne les synchronise pas vers un service cloud et n’ajoute ni compte en ligne ni télémétrie.',
+    question: 'Puis-je exporter le document en PDF ?',
+    answer: 'Oui. Exportez le document relu en PDF depuis le menu Fichier, sans le copier dans un autre outil.',
   },
   {
-    question: 'Marginalia est-il un logiciel libre ?',
-    answer: 'Oui. Le code source est publié sous licence MIT sur GitHub.',
+    question: 'Quelles versions puis-je télécharger ?',
+    answer: 'Les préversions publiques sont actuellement disponibles pour Windows et Linux. Le projet vise aussi macOS; consultez les releases pour les paquets publiés et leurs notes de version.',
+  },
+  {
+    question: 'Mes fichiers sont-ils envoyés dans le cloud ?',
+    answer: 'Non. Marginalia ouvre les fichiers depuis votre ordinateur, sans compte en ligne, synchronisation cloud ni télémétrie.',
+  },
+  {
+    question: 'Quel Markdown l’aperçu prend-il en charge ?',
+    answer: 'CommonMark et les extensions avancées de Markdig : tableaux, listes imbriquées, tâches, liens, images et blocs de code colorés.',
   },
 ];
 
@@ -52,23 +60,19 @@ const faqSchema = {
       <div class="hero-folio grid overflow-hidden rounded-md border border-rule lg:min-h-[600px] lg:grid-cols-[0.76fr_1.24fr]">
         <div class="hero-copy flex flex-col justify-between px-7 py-9 sm:px-11 sm:py-12 lg:px-12 lg:py-14">
           <div>
-            <p class="mb-7 inline-flex items-center gap-2 text-sm font-medium text-muted">
-              <span class="h-2 w-2 rounded-full bg-accent" aria-hidden="true"></span>
-              La table de travail du Markdown
-            </p>
-            <h1 class="editorial-title max-w-[12ch] text-5xl leading-[1.02] sm:text-6xl lg:text-[4.15rem]">Gardez le fil de vos idées.</h1>
-            <p class="reading-measure mt-6 text-lg leading-7 text-muted">Retrouvez vos fichiers Markdown, corrigez la source et relisez le rendu dans le même espace de bureau.</p>
+            <h1 class="editorial-title max-w-[15ch] text-5xl leading-[1.02] sm:text-6xl lg:text-[4.15rem]">Le .md de l’IA, prêt à être partagé.</h1>
+            <p class="reading-measure mt-6 text-lg leading-7 text-muted">Marginalia est un éditeur Markdown gratuit et open source. Ouvrez le fichier produit par OpenCode ou un autre agent, corrigez sa source, vérifiez l’aperçu et exportez en PDF.</p>
           </div>
           <div class="mt-9">
             <div class="flex flex-wrap items-center gap-3">
               <a class="inline-flex min-h-12 items-center gap-2 rounded-md bg-accent px-5 py-3 font-semibold text-white no-underline transition-colors hover:bg-[#1f4f9d]" href={releaseUrl} target="_blank" rel="noreferrer">
-                Télécharger la bêta <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                Télécharger gratuitement <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
               </a>
               <a class="inline-flex min-h-12 items-center gap-2 px-3 py-3 font-medium text-accent underline decoration-transparent underline-offset-4 hover:decoration-current" href={`${basePath}#fonctionnalites`}>
-                Découvrir les fonctions <i class="ph ph-arrow-down" aria-hidden="true"></i>
+                Voir le parcours <i class="ph ph-arrow-down" aria-hidden="true"></i>
               </a>
             </div>
-            <p class="mt-5 text-sm leading-6 text-secondary">Préversions publiques Windows et Linux · fichiers conservés sur votre ordinateur</p>
+            <p class="mt-5 text-sm leading-6 text-secondary">Bêta publique Windows et Linux · open source MIT · fichiers locaux</p>
           </div>
         </div>
 
@@ -95,9 +99,9 @@ const faqSchema = {
         </div>
       </div>
       <div class="mt-5 flex flex-wrap items-center justify-between gap-x-8 gap-y-3 text-sm text-secondary">
-        <span>Ouvrir un fichier ou un dossier complet</span>
-        <span>Éditer et relire côte à côte</span>
-        <span>Exporter en PDF quand c’est prêt</span>
+        <span>Ouvrir une sortie .md d’OpenCode</span>
+        <span>Modifier la source et vérifier le rendu</span>
+        <span>Exporter le document en PDF</span>
       </div>
     </div>
   </section>
@@ -105,27 +109,24 @@ const faqSchema = {
   <section id="fonctionnalites" class="scroll-mt-8 px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
     <div class="mx-auto max-w-7xl">
       <div class="grid gap-6 border-b border-rule pb-10 md:grid-cols-[minmax(12rem,0.7fr)_1.3fr] md:gap-16">
-        <p class="text-sm font-semibold text-accent">Un espace, plusieurs façons d’avancer</p>
-        <div>
-          <h2 class="editorial-title max-w-[17ch] text-4xl leading-tight sm:text-5xl">Du dossier au document prêt à partager.</h2>
-          <p class="reading-measure mt-5 text-lg leading-7 text-muted">Marginalia rassemble les gestes que l’on répète quand on travaille en Markdown — sans déplacer vos fichiers vers un service en ligne.</p>
-        </div>
+        <div><h2 class="editorial-title max-w-[17ch] text-4xl leading-tight sm:text-5xl">Votre agent a fini. Le document, pas encore.</h2></div>
+        <div><p class="reading-measure text-lg leading-7 text-muted">Un IDE peut afficher la sortie. Marginalia s’occupe de la suite : modifier le .md, voir le rendu pendant la relecture, puis exporter un PDF. Tout se passe dans un outil pensé pour le document, sur votre ordinateur.</p></div>
       </div>
 
       <article class="story-panel grid gap-8 border-b border-rule py-11 md:grid-cols-[0.7fr_1.3fr] md:gap-16 md:py-14">
         <div class="flex items-start gap-4">
           <i class="ph ph-folder-open mt-1 text-2xl text-accent" aria-hidden="true"></i>
-          <div><h3 class="text-xl font-semibold">Retrouvez vos notes</h3><p class="mt-3 max-w-sm leading-7 text-muted">Ouvrez un fichier Markdown ou un dossier entier. Recherchez dans la bibliothèque, repérez vos documents récents et revenez au bon titre grâce au plan du document.</p><p class="mt-3 text-sm leading-6 text-secondary"><kbd class="rounded border border-rule bg-white px-1.5 py-0.5 text-xs">Ctrl+O</kbd> ouvre un fichier; <kbd class="rounded border border-rule bg-white px-1.5 py-0.5 text-xs">Ctrl+Maj+O</kbd> ouvre un dossier.</p></div>
+          <div><h3 class="text-xl font-semibold">Ouvrez la sortie de votre agent</h3><p class="mt-3 max-w-sm leading-7 text-muted">Les fichiers .md et .markdown d’OpenCode, d’autres agents IA ou de vos projets existants s’ouvrent directement. Chargez un fichier ou un dossier, filtrez la bibliothèque et retrouvez un titre dans le plan du document.</p><p class="mt-3 text-sm leading-6 text-secondary"><kbd class="rounded border border-rule bg-white px-1.5 py-0.5 text-xs">Ctrl+O</kbd> ouvre un fichier; <kbd class="rounded border border-rule bg-white px-1.5 py-0.5 text-xs">Ctrl+Maj+O</kbd> ouvre un dossier.</p></div>
         </div>
         <div class="flex flex-col justify-center border-y border-rule bg-white px-5 py-4 sm:flex-row sm:items-center sm:gap-5 sm:px-7">
           <div class="min-w-40 border-b border-rule pb-3 sm:border-b-0 sm:border-r sm:pb-0 sm:pr-5">
-            <p class="text-xs font-semibold uppercase tracking-wider text-secondary">Bibliothèque</p>
-            <p class="mt-2 font-semibold">Notes de lecture</p>
+            <p class="text-xs font-semibold uppercase tracking-wider text-secondary">Sorties Markdown</p>
+            <p class="mt-2 font-semibold">Documents du projet</p>
           </div>
           <div class="grid flex-1 gap-1 py-2 sm:grid-cols-2">
-            <span class="flex items-center gap-2 py-2 text-sm"><i class="ph ph-file-text text-lg text-accent" aria-hidden="true"></i> Introduction.md</span>
-            <span class="flex items-center gap-2 py-2 text-sm"><i class="ph ph-file-text text-lg text-secondary" aria-hidden="true"></i> Projet.md</span>
-            <span class="flex items-center gap-2 py-2 text-sm"><i class="ph ph-file-text text-lg text-secondary" aria-hidden="true"></i> Références.md</span>
+            <span class="flex items-center gap-2 py-2 text-sm"><i class="ph ph-file-text text-lg text-accent" aria-hidden="true"></i> synthese.md</span>
+            <span class="flex items-center gap-2 py-2 text-sm"><i class="ph ph-file-text text-lg text-secondary" aria-hidden="true"></i> plan-projet.md</span>
+            <span class="flex items-center gap-2 py-2 text-sm"><i class="ph ph-file-text text-lg text-secondary" aria-hidden="true"></i> compte-rendu.md</span>
             <span class="flex items-center gap-2 py-2 text-sm text-secondary"><i class="ph ph-magnifying-glass text-lg" aria-hidden="true"></i> Filtrer les documents</span>
           </div>
         </div>
@@ -134,17 +135,17 @@ const faqSchema = {
       <article class="story-panel grid gap-8 border-b border-rule py-11 md:grid-cols-[0.7fr_1.3fr] md:gap-16 md:py-14">
         <div class="flex items-start gap-4">
           <i class="ph ph-columns mt-1 text-2xl text-accent" aria-hidden="true"></i>
-          <div><h3 class="text-xl font-semibold">Écrivez, puis voyez le résultat</h3><p class="mt-3 max-w-sm leading-7 text-muted">La source Markdown et son aperçu restent côte à côte. Les titres, tableaux, liens, listes imbriquées, tâches et blocs de code se lisent sans quitter le document.</p></div>
+          <div><h3 class="text-xl font-semibold">Relisez et modifiez la source</h3><p class="mt-3 max-w-sm leading-7 text-muted">L’éditeur garde le Markdown modifiable; l’aperçu montre aussitôt les titres, tableaux, listes, tâches, liens et blocs de code mis en forme. Corrigez la sortie de l’agent avant de l’envoyer.</p></div>
         </div>
         <div class="grid gap-px border border-rule bg-rule sm:grid-cols-2">
           <div class="bg-white p-5 sm:p-7">
             <p class="text-xs font-semibold tracking-wider text-secondary">VOUS ÉCRIVEZ</p>
-            <pre class="mt-4 overflow-x-auto text-sm leading-7 text-muted"><code>## Pour continuer&#10;&#10;- Relire les notes&#10;- [ ] Exporter le PDF</code></pre>
+            <pre class="mt-4 overflow-x-auto text-sm leading-7 text-muted"><code>## Décisions&#10;&#10;- Garder les notes en Markdown&#10;- [ ] Préparer le PDF</code></pre>
           </div>
           <div class="bg-white p-5 sm:p-7">
             <p class="text-xs font-semibold tracking-wider text-secondary">VOUS RELISEZ</p>
-            <h4 class="mt-4 text-lg font-semibold">Pour continuer</h4>
-            <ul class="mt-3 list-inside list-disc text-sm leading-7 text-muted"><li>Relire les notes</li><li>Exporter le PDF</li></ul>
+            <h4 class="mt-4 text-lg font-semibold">Décisions</h4>
+            <ul class="mt-3 list-inside list-disc text-sm leading-7 text-muted"><li>Garder les notes en Markdown</li><li>Préparer le PDF</li></ul>
           </div>
         </div>
       </article>
@@ -152,13 +153,13 @@ const faqSchema = {
       <article class="story-panel grid gap-8 border-b border-rule py-11 md:grid-cols-[0.7fr_1.3fr] md:gap-16 md:py-14">
         <div class="flex items-start gap-4">
           <i class="ph ph-files mt-1 text-2xl text-accent" aria-hidden="true"></i>
-          <div><h3 class="text-xl font-semibold">Gardez plusieurs documents sous la main</h3><p class="mt-3 max-w-sm leading-7 text-muted">Passez d’un onglet à l’autre, changez leur ordre et utilisez les raccourcis clavier pour rester dans votre travail. Créez un document vierge, enregistrez-le ailleurs ou recherchez et remplacez du texte.</p></div>
+          <div><h3 class="text-xl font-semibold">Continuez dans un seul bureau</h3><p class="mt-3 max-w-sm leading-7 text-muted">Gardez plusieurs fichiers ouverts, réordonnez les onglets, créez une note ou cherchez et remplacez du texte sans perdre le fil de la sortie de l’agent.</p></div>
         </div>
         <div class="border border-rule bg-white">
           <div class="flex flex-wrap items-center gap-1 border-b border-rule bg-wash px-3 pt-2 text-sm">
-            <span class="border-b-2 border-accent bg-white px-3 py-3 font-medium">Introduction.md</span>
-            <span class="px-3 py-3 text-muted">Projet.md</span>
-            <span class="px-3 py-3 text-muted">Références.md</span>
+            <span class="border-b-2 border-accent bg-white px-3 py-3 font-medium">synthese.md</span>
+            <span class="px-3 py-3 text-muted">plan-projet.md</span>
+            <span class="px-3 py-3 text-muted">compte-rendu.md</span>
           </div>
           <div class="flex flex-wrap gap-x-7 gap-y-2 px-5 py-4 text-sm text-muted">
             <span><kbd class="rounded border border-rule bg-paper px-1.5 py-0.5 text-xs">Ctrl</kbd> + <kbd class="rounded border border-rule bg-paper px-1.5 py-0.5 text-xs">Tab</kbd> Document suivant</span>
@@ -172,7 +173,7 @@ const faqSchema = {
       <article class="story-panel grid gap-8 py-11 md:grid-cols-[0.7fr_1.3fr] md:gap-16 md:py-14">
         <div class="flex items-start gap-4">
           <i class="ph ph-file-pdf mt-1 text-2xl text-accent" aria-hidden="true"></i>
-          <div><h3 class="text-xl font-semibold">Un PDF, au moment utile</h3><p class="mt-3 max-w-sm leading-7 text-muted">Exportez le document depuis le même bureau. Pas besoin de copier le texte dans un autre outil pour obtenir une version à partager.</p></div>
+          <div><h3 class="text-xl font-semibold">Terminez par un PDF</h3><p class="mt-3 max-w-sm leading-7 text-muted">Quand la sortie de l’agent est relue et corrigée, exportez une version prête à transmettre depuis le même bureau.</p></div>
         </div>
         <div class="grid items-center gap-5 border-y border-rule bg-white px-5 py-5 sm:grid-cols-[1fr_auto] sm:px-8">
           <div><p class="text-xs font-semibold tracking-wider text-secondary">DANS LE MENU FICHIER</p><p class="mt-2 text-lg font-medium">Exporter en PDF…</p><p class="mt-1 text-sm text-muted">Raccourci clavier : Ctrl + Maj + E</p></div>
@@ -184,7 +185,7 @@ const faqSchema = {
 
   <section class="border-y border-rule bg-white px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
     <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
-      <div><p class="mb-4 text-sm font-semibold text-accent">Un bureau à votre mesure</p><h2 class="editorial-title max-w-[14ch] text-4xl leading-tight sm:text-5xl">Votre espace suit votre façon de lire.</h2></div>
+      <div><h2 class="editorial-title max-w-[14ch] text-4xl leading-tight sm:text-5xl">Un bureau réglé pour votre façon de lire.</h2></div>
         <div class="grid gap-0 sm:grid-cols-2 sm:gap-x-10">
         <div class="border-t border-rule py-5"><h3 class="font-semibold">Choisissez vos panneaux</h3><p class="mt-2 leading-6 text-muted">Affichez ou repliez la bibliothèque, l’éditeur et l’aperçu. Redimensionnez-les selon le document ouvert.</p></div>
         <div class="border-t border-rule py-5"><h3 class="font-semibold">Reprenez où vous étiez</h3><p class="mt-2 leading-6 text-muted">Marginalia mémorise les dimensions et la disposition que vous préférez.</p></div>
@@ -198,10 +199,10 @@ const faqSchema = {
   <section id="compatibilite" class="scroll-mt-8 px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
     <div class="mx-auto max-w-7xl">
       <div class="grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
-        <div><p class="mb-4 text-sm font-semibold text-accent">Pour votre ordinateur</p><h2 class="editorial-title max-w-[12ch] text-4xl leading-tight sm:text-5xl">Vos notes restent chez vous.</h2></div>
+      <div><h2 class="editorial-title max-w-[12ch] text-4xl leading-tight sm:text-5xl">Vos fichiers restent chez vous.</h2></div>
         <div>
-          <p class="reading-measure text-lg leading-7 text-muted">Ouvrez vos fichiers depuis leur emplacement habituel. Marginalia ne demande ni compte ni abonnement et n’ajoute pas de télémétrie.</p>
-          <p class="reading-measure mt-4 leading-7 text-muted">Le projet vise Windows, macOS et Linux. Les préversions publiques à télécharger aujourd’hui sont celles de Windows et Linux; les notes de version précisent les systèmes et paquets réellement publiés.</p>
+          <p class="reading-measure text-lg leading-7 text-muted">Aucun compte à créer ni texte à envoyer à un service cloud : ouvrez le fichier produit par l’agent depuis son emplacement habituel, puis gardez vos modifications en local.</p>
+          <p class="reading-measure mt-4 leading-7 text-muted">Le projet vise Windows, macOS et Linux. Les préversions gratuites à télécharger aujourd’hui sont celles de Windows et Linux; les notes de version précisent les systèmes et paquets publiés.</p>
           <a class="mt-6 inline-flex min-h-11 items-center gap-2 font-semibold text-accent underline decoration-transparent underline-offset-4 hover:decoration-current" href={releaseUrl} target="_blank" rel="noreferrer">Voir les versions disponibles <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
         </div>
       </div>
@@ -210,14 +211,14 @@ const faqSchema = {
 
   <section class="px-5 pb-16 sm:px-8 sm:pb-20 lg:px-12">
     <div class="download-panel mx-auto grid max-w-7xl gap-8 rounded-md px-6 py-9 sm:px-10 sm:py-12 md:grid-cols-[1fr_auto] md:items-center lg:px-14">
-      <div><p class="mb-3 text-sm font-medium text-[#c7d2fe]">Le code est ouvert, les fichiers restent locaux.</p><h2 class="editorial-title max-w-[17ch] text-3xl leading-tight sm:text-4xl">Essayez Marginalia avec vos propres notes.</h2><p class="mt-4 max-w-[58ch] leading-7 text-[#e1e5ec]">Téléchargez la bêta pour Windows ou Linux depuis les releases officielles. La page de version indique les fichiers, sommes de contrôle et changements.</p></div>
-      <a class="inline-flex min-h-12 items-center justify-center gap-2 self-start rounded-md bg-white px-5 py-3 font-semibold text-ink no-underline transition-colors hover:bg-[#e6eaf1] md:self-center" href={releaseUrl} target="_blank" rel="noreferrer">Choisir ma version <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+      <div><p class="mb-3 text-sm font-medium text-[#c7d2fe]">Gratuit · open source · MIT</p><h2 class="editorial-title max-w-[17ch] text-3xl leading-tight sm:text-4xl">Récupérez la sortie de l’agent. Faites-en votre document.</h2><p class="mt-4 max-w-[58ch] leading-7 text-[#e1e5ec]">Téléchargez les préversions Windows ou Linux depuis les releases officielles. Vérifiez les fichiers et les notes de version avant l’installation.</p></div>
+      <a class="inline-flex min-h-12 items-center justify-center gap-2 self-start rounded-md bg-white px-5 py-3 font-semibold text-ink no-underline transition-colors hover:bg-[#e6eaf1] md:self-center" href={releaseUrl} target="_blank" rel="noreferrer">Télécharger gratuitement <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
     </div>
   </section>
 
   <section id="questions" class="scroll-mt-8 bg-white px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
     <div class="mx-auto grid max-w-7xl gap-9 md:grid-cols-[0.7fr_1.3fr] md:gap-16">
-      <div><p class="mb-4 text-sm font-semibold text-accent">Avant de commencer</p><h2 class="editorial-title max-w-[11ch] text-4xl leading-tight sm:text-5xl">Questions fréquentes.</h2></div>
+      <div><h2 class="editorial-title max-w-[11ch] text-4xl leading-tight sm:text-5xl">Questions fréquentes.</h2></div>
       <div>
         {faqs.map(({ question, answer }) => (
           <details class="faq-item group">
