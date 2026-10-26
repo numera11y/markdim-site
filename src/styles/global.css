@@ -79,10 +79,6 @@ a {
   text-wrap: balance;
 }
 
-.section-rule {
-  border-top: 1px solid var(--color-rule);
-}
-
 .text-link {
   color: var(--color-accent);
   text-decoration-thickness: 1px;
@@ -135,7 +131,7 @@ a {
   z-index: 1;
 }
 
-.demo-window {
+.application-capture-frame {
   overflow: hidden;
   border: 1px solid #c7cdd6;
   border-radius: 8px;
@@ -143,24 +139,8 @@ a {
   box-shadow: 0 12px 28px rgb(23 26 33 / 10%);
 }
 
-.demo-pane {
-  min-width: 0;
-}
-
-.demo-code {
-  color: #344054;
-  background: #f8f9fb;
-  font-family: ui-monospace, "Cascadia Code", "SFMono-Regular", Consolas, monospace;
-  tab-size: 2;
-}
-
-.demo-preview h3 {
-  font-family: var(--font-editorial);
-  font-weight: 500;
-}
-
-.paper-shadow {
-  box-shadow: 0 12px 34px rgb(23 26 33 / 9%);
+.capture-zoom {
+  box-shadow: 0 4px 10px rgb(23 26 33 / 12%);
 }
 
 .faq-item {
@@ -331,15 +311,6 @@ a {
   .hero-copy,
   .hero-demonstration {
     padding: 25px 20px;
-  }
-
-  .demo-panes {
-    grid-template-columns: 1fr !important;
-  }
-
-  .demo-code {
-    border-right: 0 !important;
-    border-bottom: 1px solid #c7cdd6;
   }
 
   .story-panel {

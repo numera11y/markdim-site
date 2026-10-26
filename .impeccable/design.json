@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-26T15:08:23.422Z",
+  "generatedAt": "2026-10-26T15:34:05.052Z",
   "title": "Design System: Marginalia Site",
   "extensions": {
     "colorMeta": {
@@ -26,8 +26,8 @@
     },
     "shadows": [
       { "name": "folio-ambient", "value": "0 16px 44px rgb(23 26 33 / 9%)", "purpose": "Separates the hero folio from the page ground." },
-      { "name": "demo-window", "value": "0 12px 28px rgb(23 26 33 / 10%)", "purpose": "Lifts the reconstructed app window in the folio." },
-      { "name": "paper-surface", "value": "0 12px 34px rgb(23 26 33 / 9%)", "purpose": "Reusable soft paper elevation." },
+      { "name": "application-capture-frame", "value": "0 12px 28px rgb(23 26 33 / 10%)", "purpose": "Lifts the actual application screenshot in the folio." },
+      { "name": "capture-zoom-control", "value": "0 4px 10px rgb(23 26 33 / 12%)", "purpose": "Keeps the full-resolution capture action visible over the screenshot." },
       { "name": "mobile-menu", "value": "0 12px 28px rgb(23 26 33 / 12%)", "purpose": "Separates the opened compact navigation." }
     ],
     "breakpoints": [
@@ -62,11 +62,11 @@
       "css": ".ds-nav { display: flex; align-items: center; gap: 28px; font: 400 14px/1.5 'IBM Plex Sans Variable', sans-serif; color: #344054; } .ds-nav a { display: inline-flex; min-height: 44px; align-items: center; color: inherit; text-decoration: none; } .ds-nav a:hover { color: #171a21; } .ds-nav a:focus-visible { outline: 3px solid #275dad; outline-offset: 4px; border-radius: 3px; }"
     },
     {
-      "name": "Open Folio Demo Window",
+      "name": "Marginalia Application Capture",
       "kind": "custom",
-      "description": "Reconstructed source and live reading view presented as an explicitly marked example.",
-      "html": "<section class=\"ds-demo-window\" aria-label=\"Exemple de source et aperçu\"><header>Notes de lecture <span>Exemple</span></header><div class=\"ds-demo-tabs\"><span>Introduction.md</span><span>Projet.md</span><span>Références.md</span></div><div class=\"ds-demo-panes\"><pre># Lire, écrire, relire\n\nUne idée prend forme.</pre><article><h3>Lire, écrire, relire</h3><p>Une idée prend forme.</p></article></div><footer>Introduction.md <span>Markdown</span></footer></section>",
-      "css": ".ds-demo-window { overflow: hidden; border: 1px solid #c7cdd6; border-radius: 8px; background: #fff; color: #344054; box-shadow: 0 12px 28px rgb(23 26 33 / 10%); font: 400 13px/1.6 'IBM Plex Sans Variable', sans-serif; } .ds-demo-window header, .ds-demo-window footer { display: flex; min-height: 42px; align-items: center; justify-content: space-between; padding: 8px 16px; border-bottom: 1px solid #c7cdd6; background: #fff; } .ds-demo-window header span { padding: 2px 8px; border-radius: 4px; background: #eef1f5; } .ds-demo-tabs { display: flex; gap: 4px; overflow: hidden; padding: 0 12px; border-bottom: 1px solid #c7cdd6; white-space: nowrap; } .ds-demo-tabs span { padding: 10px 12px; } .ds-demo-tabs span:first-child { border-bottom: 2px solid #275dad; color: #171a21; } .ds-demo-panes { display: grid; grid-template-columns: 1fr 1fr; } .ds-demo-panes pre { margin: 0; padding: 20px; border-right: 1px solid #c7cdd6; background: #f8f9fb; color: #344054; font: 400 12px/1.9 ui-monospace, 'Cascadia Code', Consolas, monospace; white-space: pre-wrap; } .ds-demo-panes article { padding: 20px; } .ds-demo-panes h3 { margin: 0 0 8px; color: #171a21; font: 500 22px/1.3 'IBM Plex Serif', Georgia, serif; } .ds-demo-panes p { margin: 0; } .ds-demo-window footer { border-top: 1px solid #c7cdd6; border-bottom: 0; color: #475467; } @media (max-width: 680px) { .ds-demo-panes { grid-template-columns: 1fr; } .ds-demo-panes pre { border-right: 0; border-bottom: 1px solid #c7cdd6; } }"
+      "description": "Actual application capture with a local Markdown sample; the crop excludes machine-specific path details.",
+      "html": "<figure class=\"ds-app-capture\"><a href=\"https://numera11y.github.io/marginalia-site/images/marginalia-workspace.webp\" aria-label=\"Ouvrir la capture en taille originale\"><img src=\"https://numera11y.github.io/marginalia-site/images/marginalia-workspace.webp\" alt=\"Marginalia's Markdown editor and live preview\" width=\"1606\" height=\"952\"><span class=\"ds-zoom\"><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><circle cx=\"6.5\" cy=\"6.5\" r=\"4\" fill=\"none\" stroke=\"currentColor\"/><path d=\"m10 10 4 4m-7.5-7.5h4m-2-2v4\" fill=\"none\" stroke=\"currentColor\"/></svg> Agrandir</span></a><figcaption>Capture réelle de l’application avec un document local d’exemple.</figcaption></figure>",
+      "css": ".ds-app-capture { margin: 0; overflow: hidden; border: 1px solid #c7cdd6; border-radius: 8px; background: #fff; box-shadow: 0 12px 28px rgb(23 26 33 / 10%); } .ds-app-capture a { position: relative; display: block; cursor: zoom-in; } .ds-app-capture img { display: block; width: 100%; height: auto; } .ds-app-capture .ds-zoom { position: absolute; right: 12px; bottom: 12px; display: inline-flex; min-height: 44px; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid #c7cdd6; border-radius: 6px; background: #fff; color: #275dad; font: 600 12px/1.5 'IBM Plex Sans Variable', sans-serif; box-shadow: 0 4px 10px rgb(23 26 33 / 12%); } .ds-app-capture .ds-zoom svg { width: 16px; height: 16px; } .ds-app-capture figcaption { margin-top: 12px; color: #475467; font: 400 12px/1.5 'IBM Plex Sans Variable', sans-serif; }"
     },
     {
       "name": "FAQ Disclosure",
@@ -86,12 +86,12 @@
   ],
   "narrative": {
     "northStar": "Le bureau ouvert",
-    "overview": "The site presents Marginalia as an editorial atelier: a clear, quiet working surface where the idea of the application is understood by seeing Markdown source and its rendered reading view together. Pale pearl paper, white sheets, slate ink, and the logo's blue accent carry the identity. The editorial serif supplies a reading voice; sans-serif interface labels and copy keep the interface precise and usable.\n\nThe signature composition is an open folio: concise explanation and a direct beta action face a reconstructed application example, explicitly marked as an example. Fine rules, restrained shadows, and useful annotations organize the page without turning it into a generic card grid. Responsive behavior stacks the folio and its two demo panes for narrow screens.",
+    "overview": "The site presents Marginalia as an editorial atelier: a clear working surface where visitors see a genuine capture of the Markdown editor and rendered reading view. Pale pearl paper, white sheets, slate ink, and the logo's blue accent carry the identity. The editorial serif supplies a reading voice; sans-serif interface labels and copy keep the interface precise and usable.\n\nThe signature composition is an open folio: concise explanation and a direct beta action face the actual application. The capture contains an authored local sample document and is cropped to exclude machine-specific path details. Fine rules and restrained shadows organize the page without turning it into a generic card grid. Responsive behavior stacks the folio copy and screenshot while preserving the image's aspect ratio.",
     "keyCharacteristics": [
       "Pearl-gray page ground with white paper surfaces and slate typography.",
       "Blue is reserved for actions, links, selected states, and small markers.",
       "Editorial serif headlines paired with IBM Plex Sans interface text.",
-      "Folio composition, thin rules, and restrained depth."
+      "Folio composition, real application capture, thin rules, and restrained depth."
     ],
     "rules": [],
     "dos": [
@@ -99,7 +99,7 @@
       "Do use IBM Plex Serif for editorial display headings and IBM Plex Sans for interface and body text.",
       "Do use thin gray rules and white surfaces to structure content before adding depth.",
       "Do keep labels and annotations compact and legible; uppercase demo captions use the established tracking.",
-      "Do stack the folio and demo panes at the documented responsive changes."
+      "Do stack the folio copy and screenshot at the documented breakpoint while preserving the screenshot's aspect ratio."
     ],
     "donts": [
       "Don't use the blue accent as a broad page background; its observed role is action, link, selection, and small orientation cues.",

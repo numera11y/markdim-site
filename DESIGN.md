@@ -18,7 +18,7 @@ colors:
 typography:
   display:
     fontFamily: "IBM Plex Serif, Georgia, serif"
-    fontSize: "3rem / 3.75rem (sm) / 4.15rem (lg)"
+    fontSize: "4.15rem"
     fontWeight: 500
     lineHeight: 1.02
     letterSpacing: "-0.045em"
@@ -85,12 +85,12 @@ components:
 
 The site presents Marginalia as an editorial atelier: a clear, quiet working surface where the idea of the application is understood by seeing Markdown source and its rendered reading view together. Pale pearl paper, white sheets, slate ink, and the logo's blue accent carry the identity. The editorial serif supplies a reading voice; sans-serif interface labels and copy keep the interface precise and usable.
 
-The signature composition is an open folio: concise explanation and a direct beta action face a reconstructed application example, explicitly marked as an example. Fine rules, restrained shadows, and useful annotations organize the page without turning it into a generic card grid. Responsive behavior stacks the folio and its two demo panes for narrow screens.
+The signature composition is an open folio: concise explanation and a direct beta action face a real capture of the Marginalia application, showing its Markdown editor and live preview. The screenshot uses an authored local sample document and is cropped to exclude machine-specific file paths. Fine rules and restrained shadows organize the page without turning it into a generic card grid. Responsive behavior stacks the folio around the image on narrow screens.
 
 **Key Characteristics:**
 - Pearl-gray page ground with white paper surfaces and slate typography.
 - Blue is reserved for actions, links, selected states, and small markers.
-- Editorial serif headlines paired with IBM Plex Sans interface text.
+- Editorial serif headlines paired with IBM Plex Sans interface text and a genuine application capture.
 - Folio composition, thin rules, and restrained depth.
 
 ## Colors
@@ -118,7 +118,7 @@ The palette follows the slate-and-blue Marginalia mark: cool paper and ink provi
 
 **Display Font:** IBM Plex Serif (with Georgia, serif fallback)
 **Body Font:** IBM Plex Sans Variable (with sans-serif fallback)
-**Label/Mono Font:** IBM Plex Sans Variable for interface labels; system monospace stack for the reconstructed source pane.
+**Label/Mono Font:** IBM Plex Sans Variable for interface labels; system monospace stack is visible inside the captured Markdown source pane.
 
 **Character:** IBM Plex Serif gives large headings a literary, print-like voice without decorative excess. IBM Plex Sans keeps navigation, descriptions, controls, and small annotations direct and legible.
 
@@ -133,23 +133,23 @@ The palette follows the slate-and-blue Marginalia mark: cool paper and ink provi
 
 Content uses a centered maximum-width frame of 80rem (max-w-7xl), with page gutters that grow from 20px on small screens to 32px and 48px at larger viewport widths. Section vertical rhythm uses 64px on compact layouts, 80px at medium widths, and up to 96px on wide layouts. Text columns use a 68ch measure.
 
-The hero folio is a bordered, gently rounded two-part sheet. On wide screens its explanatory side and demonstration side use an approximately 0.76:1.24 column ratio; the subtle central fold and light-to-white surface gradient reinforce the open-folio composition. At widths up to 900px the fold disappears and the copy and demo stack. At up to 680px the hero's source and preview panes stack, story rows become single-column, and desktop navigation gives way to a compact disclosure menu. Other responsive behavior is limited to the specific column and padding changes present in the layout. The layout supports a 320px minimum viewport without horizontal overflow.
+The hero folio is a bordered, gently rounded two-part sheet. On wide screens its explanatory side and application screenshot use an approximately 0.76:1.24 column ratio; the subtle central fold and light-to-white surface gradient reinforce the open-folio composition. At widths up to 900px the fold disappears and the copy and screenshot stack. At up to 680px story rows become single-column and desktop navigation gives way to a compact disclosure menu. The app capture scales as one image without changing its aspect ratio. Other responsive behavior is limited to the specific column and padding changes present in the layout. The page supports a 320px minimum viewport without horizontal overflow.
 
 Observed responsive thresholds are 680px, 900px, and the utility framework's `sm` (640px) and `lg` (1024px) layout changes.
 
 ## Elevation & Depth
 
-Depth is restrained and mostly structural: thin gray rules and white-on-paper tonal shifts do most of the work. Shadows distinguish the large folio, the reconstructed application window, and the opened mobile navigation menu from their surroundings; they are soft and broad rather than sharp.
+Depth is restrained and mostly structural: thin gray rules and white-on-paper tonal shifts do most of the work. Shadows distinguish the large folio, its captured application image frame, and the opened mobile navigation menu from their surroundings; they are soft and broad rather than sharp.
 
 ### Shadow Vocabulary
 - **Folio ambient** (`0 16px 44px rgb(23 26 33 / 9%)`): separates the hero sheet from the page ground.
-- **Demo window** (`0 12px 28px rgb(23 26 33 / 10%)`): lifts the application example within the folio.
-- **Paper surface** (`0 12px 34px rgb(23 26 33 / 9%)`): reusable paper-like elevation treatment.
+- **Application image frame** (`0 12px 28px rgb(23 26 33 / 10%)`): lifts the genuine application capture within the folio.
+- **Capture enlarge control** (`0 4px 10px rgb(23 26 33 / 12%)`): keeps the mobile full-resolution action visible over the screenshot.
 - **Mobile menu** (`0 12px 28px rgb(23 26 33 / 12%)`): distinguishes the open navigation disclosure.
 
 ## Shapes
 
-The form language is mostly square-edged editorial paper with modest rounding at contained interactive or application surfaces. Common radii are 5px for the compact menu control, 6px for action buttons and large panels, and 8px for the demo window. Borders are thin and cool gray; panes meet at straight rules. Circular shapes are limited to small accent markers and the PDF icon medallion. Keyboard focus outlines are 3px thick; this is a stroke width, not a corner radius.
+The form language is mostly square-edged editorial paper with modest rounding at contained interactive or application surfaces. Common radii are 5px for the compact menu control, 6px for action buttons and large panels, and 8px for the application capture frame. Borders are thin and cool gray; panes meet at straight rules. Circular shapes are limited to small accent markers and the PDF icon medallion. Keyboard focus outlines are 3px thick; this is a stroke width, not a corner radius.
 
 ## Components
 
@@ -171,9 +171,9 @@ The form language is mostly square-edged editorial paper with modest rounding at
 - **State:** each summary has a minimum 60px height. A blue plus marks the closed state and changes to a minus when open; answer copy uses muted slate, 1.7 line-height, and the standard reading measure.
 
 ### Open Folio
-- **Style:** signature hero composition with white copy paper and a reconstructed editor/preview example in a second pane. On desktop a subtle fold separates the halves; at compact widths only the implemented hero panes and related content rows collapse into stacked paper and wash-gray areas.
-- **Demo window:** 8px corners, thin gray stroke, white interface chrome, horizontal tabs, paired source and rendered reading panes, and a bottom status line. On narrow mobile widths source and preview become a vertical sequence.
-- **Annotation:** the example badge and accompanying note identify the demo as reconstructed/example content.
+- **Style:** signature hero composition with white copy paper and a real Marginalia editor/preview screenshot in the second pane. On desktop a subtle fold separates the halves; at compact widths the copy and capture stack into paper and wash-gray areas.
+- **Application capture:** 8px frame corners, thin gray stroke, genuine source editor, live rendered preview, and visible document tabs. The crop excludes the library's absolute file path and the window status strip; a visible 44px enlarge control opens the screenshot at its original resolution on mobile.
+- **Annotation:** a short caption identifies the image as an application capture with a local sample document.
 
 ## Do's and Don'ts
 
@@ -182,7 +182,7 @@ The form language is mostly square-edged editorial paper with modest rounding at
 - **Do** use IBM Plex Serif for editorial display headings and IBM Plex Sans for interface and body text.
 - **Do** use thin gray rules and white surfaces to structure content before adding depth.
 - **Do** keep labels and annotations compact and legible; uppercase demo captions use the established tracking.
-- **Do** stack only the folio and demo panes at the documented responsive changes.
+- **Do** stack the folio copy and screenshot at the documented breakpoint, preserving the screenshot's aspect ratio.
 
 ### Don't:
 - **Don't** use the blue accent as a broad page background; its observed role is action, link, selection, and small orientation cues.

@@ -73,49 +73,25 @@ const faqSchema = {
         </div>
 
         <div class="hero-demonstration flex items-center px-5 py-6 sm:px-9 sm:py-9 lg:px-10 lg:py-12">
-          <div class="w-full">
-            <div class="demo-window">
-              <div class="flex h-11 items-center justify-between border-b border-rule bg-white px-4 text-xs text-muted">
-                <span class="inline-flex items-center gap-2 font-medium text-ink"><i class="ph ph-folder-open text-base text-accent" aria-hidden="true"></i> Notes de lecture</span>
-                <span class="rounded-sm bg-wash px-2 py-1">Exemple</span>
-              </div>
-              <div class="flex h-10 items-center gap-1 overflow-hidden border-b border-rule bg-white px-3 text-xs text-muted">
-                <span class="whitespace-nowrap border-b-2 border-accent px-3 py-3 text-ink">Introduction.md</span>
-                <span class="whitespace-nowrap px-3 py-3">Projet.md</span>
-                <span class="whitespace-nowrap px-3 py-3">Références.md</span>
-              </div>
-              <div class="demo-panes grid min-h-[310px] grid-cols-2">
-                <div class="demo-pane demo-code border-r border-rule px-4 py-5 text-[11px] leading-[1.9] sm:px-5 sm:text-xs">
-                  <p class="mb-3 font-sans text-[10px] font-semibold tracking-[0.12em] text-secondary">SOURCE MARKDOWN</p>
-                  <span class="text-accent">#</span> Lire, écrire, relire<br />
-                  <br />
-                  Une idée prend forme dans son propre fichier.<br />
-                  <br />
-                  <span class="text-accent">##</span> Garder le fil<br />
-                  <br />
-                  - Vos documents, réunis<br />
-                  - Le rendu, visible en direct<br />
-                  <br />
-                  **Prêt à partager ?**
-                </div>
-                <div class="demo-pane demo-preview px-4 py-5 text-xs leading-6 text-muted sm:px-5 sm:text-sm">
-                  <p class="mb-3 text-[10px] font-semibold tracking-[0.12em] text-secondary">APERÇU EN DIRECT</p>
-                  <h3 class="mb-2 text-xl text-ink sm:text-2xl">Lire, écrire, relire</h3>
-                  <p>Une idée prend forme dans son propre fichier.</p>
-                  <h4 class="mb-1 mt-4 font-semibold text-ink">Garder le fil</h4>
-                  <ul class="list-inside list-disc">
-                    <li>Vos documents, réunis</li>
-                    <li>Le rendu, visible en direct</li>
-                  </ul>
-                  <p class="mt-3 font-semibold text-ink">Prêt à partager ?</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-between border-t border-rule bg-white px-4 py-2.5 text-[10px] text-secondary sm:text-xs">
-                <span>Introduction.md</span><span>Ligne 1, colonne 1</span><span>Markdown</span>
-              </div>
+          <figure class="w-full">
+            <div class="application-capture-frame">
+              <a class="relative block cursor-zoom-in" href={`${basePath}images/marginalia-workspace.webp`} target="_blank" rel="noreferrer" aria-label="Ouvrir la capture réelle de Marginalia en taille originale">
+                <img
+                  class="block h-auto w-full"
+                  src={`${basePath}images/marginalia-workspace.webp`}
+                  alt="Capture réelle de Marginalia montrant un document Markdown dans l’éditeur et son aperçu en direct, avec une liste, une citation et un tableau."
+                  width="1606"
+                  height="952"
+                  decoding="async"
+                  fetchpriority="high"
+                />
+                <span class="capture-zoom absolute bottom-3 right-3 inline-flex min-h-11 items-center gap-2 rounded-md border border-rule bg-white px-3 py-2 text-xs font-semibold text-accent">
+                  <i class="ph ph-magnifying-glass-plus text-base" aria-hidden="true"></i> Agrandir
+                </span>
+              </a>
             </div>
-            <p class="mt-3 flex items-start gap-2 text-xs leading-5 text-secondary"><i class="ph ph-info mt-0.5 text-accent" aria-hidden="true"></i> Aperçu reconstitué à partir des fonctions de l’application; le document affiché est un exemple.</p>
-          </div>
+            <figcaption class="mt-3 flex items-start gap-2 text-xs leading-5 text-secondary"><i class="ph ph-info mt-0.5 text-accent" aria-hidden="true"></i> Capture de l’application avec un document local d’exemple.</figcaption>
+          </figure>
         </div>
       </div>
       <div class="mt-5 flex flex-wrap items-center justify-between gap-x-8 gap-y-3 text-sm text-secondary">
