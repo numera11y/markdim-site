@@ -53,13 +53,13 @@ const faqSchema = {
 
       <figure class="hero-capture mx-auto mt-10 max-w-7xl sm:mt-14">
         <div class="application-capture-frame">
-          <a class="relative block cursor-zoom-in" href={`${basePath}images/markdim-workspace.webp`} target="_blank" rel="noreferrer" aria-label={copy.screenshotLink}>
+          <a class="relative block cursor-zoom-in" href={`${basePath}${copy.screenshotImage}`} target="_blank" rel="noreferrer" aria-label={copy.screenshotLink}>
             <img
               class="block h-auto w-full"
-              src={`${basePath}images/markdim-workspace.webp`}
+              src={`${basePath}${copy.screenshotImage}`}
               alt={copy.screenshotAlt}
-              width="1606"
-              height="952"
+              width={lang === 'en' ? '1720' : '1606'}
+              height={lang === 'en' ? '1009' : '952'}
               decoding="async"
               fetchpriority="high"
             />

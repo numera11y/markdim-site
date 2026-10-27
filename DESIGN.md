@@ -91,7 +91,7 @@ components:
 
 markdim's site is a modern, dark, lively product launch: confident and polished, with the actual application—not decorative campaign art—as its proof. Deep blue-charcoal surfaces, cool readable text, fine slate borders, and markdim's periwinkle accents carry the app identity. IBM Plex Sans Variable handles the complete typographic voice, from oversized launch headline to compact route labels.
 
-The first view centers the direct “Lire. Écrire. Exporter.” promise and free-download action above a genuine, clickable dark-mode application capture. A short animated signal traces Écrire → Relire → PDF. Below, rule-separated asymmetrical feature rows and ruled preference panes explain the product without generic card grids. Brief entrance and route motion add energy; reduced-motion preference disables animation and transitions.
+The first view at `/` centers the direct “Read. Write. Export.” promise and free-download action above a genuine, clickable English-language dark-mode application capture. French translations are available under `/fr/`, with the same layout, content structure, and a localized French application capture. A short animated signal traces Write → Review → PDF (localized by route). Below, rule-separated asymmetrical feature rows and ruled preference panes explain the product without generic card grids. Brief entrance and route motion add energy; reduced-motion preference disables animation and transitions.
 
 **Key Characteristics:**
 - Dark product palette and legible cool-toned copy.
@@ -142,7 +142,7 @@ The palette follows the shipped dark application theme: blue-charcoal surfaces, 
 
 Content sits in a centered 80rem maximum-width frame with 20px compact gutters, 32px at `sm`, and 48px at `lg`. The hero uses a centered maximum-64rem text group above a full-width application capture, up to the 80rem container width. The primary download and secondary feature link sit together, followed by platform availability and the three-step route.
 
-The feature introduction divides evenly at `md`; its four rows use icon, title, and copy in asymmetric columns. The preference section places a heading beside stacked ruled rows. Local-file and download content use wide editorial alignments; FAQ uses a narrow heading column beside disclosure rows. At 900px the hero copy gains a bottom rule. At 680px desktop links collapse into native details navigation and route gaps/tracks shrink; the application capture scales proportionally at its 1606:952 aspect ratio. The page supports a 320px minimum width. Tailwind layout breakpoints used include `sm` (640px), `md` (768px), and `lg` (1024px).
+The feature introduction divides evenly at `md`; its four rows use icon, title, and copy in asymmetric columns. The preference section places a heading beside stacked ruled rows. Local-file and download content use wide editorial alignments; FAQ uses a narrow heading column beside disclosure rows. At 900px the hero copy gains a bottom rule. At 680px desktop links collapse into native details navigation and route gaps/tracks shrink; the English application capture scales at 1720:1009 and the French capture at 1606:952. The page supports a 320px minimum width. Tailwind layout breakpoints used include `sm` (640px), `md` (768px), and `lg` (1024px).
 
 ## Elevation & Depth
 

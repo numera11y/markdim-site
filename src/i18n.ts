@@ -37,6 +37,7 @@ interface HomeCopy {
   workflowLabel: string;
   workflow: [string, string, string];
   screenshotLink: string;
+  screenshotImage: string;
   screenshotAlt: string;
   zoom: string;
   screenshotCaption: string;
@@ -182,7 +183,8 @@ export const siteCopy: Record<Locale, LocaleCopy> = {
       workflowLabel: 'Markdown workflow',
       workflow: ['Write', 'Review', 'PDF'],
       screenshotLink: 'Open the actual markdim screenshot at full size',
-      screenshotAlt: 'Actual markdim screenshot in dark mode: Markdown source on the left and rendered preview on the right. The captured interface is in French.',
+      screenshotImage: 'images/markdim-workspace.en.webp',
+      screenshotAlt: 'Actual markdim screenshot in dark mode: English Markdown source on the left and rendered preview on the right.',
       zoom: 'Enlarge',
       screenshotCaption: 'Actual application capture showing a local sample document.',
       featureTitle: 'One workspace for all your Markdown.',
@@ -334,6 +336,7 @@ export const siteCopy: Record<Locale, LocaleCopy> = {
       workflowLabel: 'Parcours du Markdown',
       workflow: ['Écrire', 'Relire', 'PDF'],
       screenshotLink: 'Ouvrir la capture réelle de markdim en taille originale',
+      screenshotImage: 'images/markdim-workspace.webp',
       screenshotAlt: 'Capture réelle de markdim en mode sombre : source Markdown à gauche et aperçu rendu à droite.',
       zoom: 'Agrandir',
       screenshotCaption: 'Capture réelle de l’application avec un document local d’exemple.',

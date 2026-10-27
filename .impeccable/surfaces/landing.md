@@ -5,9 +5,9 @@ primary_target: src/pages/index.astro
 related_targets: []
 ---
 
-# markdim marketing site
+# markdim bilingual marketing site
 
-Mode: Persuade. Audience: people who read, create, and share Markdown files on Windows, macOS, or Linux. Core job: open or create a `.md`, edit the source with the rendered preview visible, adjust the workspace, then export a PDF. OpenCode and other AI output are valid examples, not the primary audience. Product facts: markdim is free and MIT-licensed; public beta packages currently exist for Windows and Linux, while the project targets macOS too. Do not claim the macOS beta is available, do not imply the product is unique among Markdown editors, and do not fabricate benchmarks or testimonials. The website is a separate Astro/Tailwind CSS 4 GitHub Pages repository.
+Mode: Persuade. Audience: people who read, create, and share Markdown files on Windows, macOS, or Linux. Core job: open or create a `.md`, edit the source with the rendered preview visible, adjust the workspace, then export a PDF. OpenCode and other AI output are valid examples, not the primary audience. Product facts: markdim is free and MIT-licensed; public beta packages currently exist for Windows and Linux, while the project targets macOS too. English is the default website language at `/`; French routes live under `/fr/`. Every page has a visible language switcher, canonical URL, and `hreflang` alternates. Do not claim the macOS beta is available, do not imply the product is unique among Markdown editors, and do not fabricate benchmarks or testimonials. The website is a separate Astro/Tailwind CSS 4 GitHub Pages repository.
 
 ## Direction contract
 
@@ -17,7 +17,7 @@ OWN-WORLD: The user's dark-mode, Apple-launch-inspired request is the visual con
 
 STORY: Open an existing file or create one, edit Markdown beside its live preview, choose a workspace/theme/zoom, and export a PDF; download the free Windows/Linux beta.
 
-FIRST VIEWPORT: Compact dark navigation; the direct “Lire. Écrire. Exporter.” headline, free-download action, and a large, real dark-mode application capture. A short animated Écrire → Relire → PDF route labels the workflow; the capture opens full size on touch. The next section starts with asymmetric, ruled feature rows.
+FIRST VIEWPORT: Compact dark navigation with an English/French language switch; the default English “Read. Write. Export.” headline, free-download action, and a large, real English dark-mode application capture. French keeps the matching “Lire. Écrire. Exporter.” promise and French UI capture. A short localized Write → Review → PDF route labels the workflow; the capture opens full size on touch. The next section starts with asymmetric, ruled feature rows.
 
 FORM: Persuade, code-led dark product launch, user direction pinned to modern, lively, non-corporate. Direction seed `611e99d6`, assigned glazier panes translated using the app's actual dark palette. One orchestrated movement connects writing to review to PDF; all motion stops under reduced-motion preferences.
 

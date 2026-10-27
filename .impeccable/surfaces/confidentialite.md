@@ -8,7 +8,7 @@ related_targets:
 
 # Politique de confidentialité markdim
 
-Mode: Read. Audience: markdim users and Microsoft Store reviewers looking for clear privacy facts. Job: understand what stays local, when network requests occur, what the website and Microsoft Store handle, and how to contact Numera11y. State only behavior verified in the application and site source. The page is in French, matches the existing dark surface, and is linked site-wide in the footer.
+Mode: Read. Audience: markdim users and Microsoft Store reviewers looking for clear privacy facts. Job: understand what stays local, when network requests occur, what the website and Microsoft Store handle, and how to contact Numera11y. State only behavior verified in the application and site source. The page follows the route locale (English by default, French under `/fr/`), matches the existing dark surface, and is linked site-wide in the footer.
 
 ## Direction contract
 
