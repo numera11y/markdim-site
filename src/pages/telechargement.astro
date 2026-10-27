@@ -149,7 +149,7 @@ const githubReleasesUrl = 'https://github.com/numera11y/markdim/releases';
       return row;
     }
 
-    function makeRelease(release: PublishedRelease): HTMLElement {
+    function makeRelease(release: PublishedRelease, selectedPlatform: string): HTMLElement {
       const article = makeElement('article', 'release-entry grid gap-6 border-t border-rule py-7 sm:py-8 md:grid-cols-[minmax(12rem,0.8fr)_2fr] md:gap-12');
       const heading = makeElement('div', 'flex flex-col items-start gap-3');
       const titleLine = makeElement('div', 'flex flex-wrap items-center gap-3');
@@ -185,6 +185,7 @@ const githubReleasesUrl = 'https://github.com/numera11y/markdim/releases';
       }
 
       for (const platform of ['windows', 'linux', 'macos'] as const) {
+        if (selectedPlatform !== 'all' && selectedPlatform !== platform) continue;
         const assets = grouped.get(platform);
         if (!assets?.length) continue;
         const group = makeElement('section', 'min-w-0');
@@ -213,7 +214,7 @@ const githubReleasesUrl = 'https://github.com/numera11y/markdim/releases';
         if (selectedPlatform === 'all') return true;
         return release.assets.some(asset => platformFor(asset.name) === selectedPlatform);
       });
-      list.replaceChildren(...visible.map(makeRelease));
+      list.replaceChildren(...visible.map(release => makeRelease(release, selectedPlatform)));
       list.setAttribute('aria-busy', 'false');
 
       if (!visible.length) {
