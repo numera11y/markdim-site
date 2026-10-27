@@ -36,6 +36,7 @@ Confirmed capabilities: local files and folders, library search and outline, reo
 - The actual application screenshot used on this site is `public/images/markdim-workspace.webp`; its origin is recorded alongside the raster.
 - The logo mark is shipped as `public/markdim.svg`.
 - The independent website repository deploys to <https://numera11y.github.io/markdim-site/>.
+- The `/telechargement/` page reads public GitHub releases live, including prereleases, so its download catalogue stays current without a site rebuild.
 
 ## Product Principles
 

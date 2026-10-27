@@ -1,11 +1,11 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 
-const releaseUrl = 'https://github.com/numera11y/markdim/releases/latest';
 const repositoryUrl = 'https://github.com/numera11y/markdim';
 const basePath = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
+const downloadsUrl = `${basePath}telechargement/`;
 
 const faqs = [
   {
@@ -68,7 +68,7 @@ const faqSchema = {
         <h1 class="display-title mx-auto max-w-[16ch] text-5xl leading-[0.98] sm:text-6xl lg:text-8xl">Lire. Écrire. Exporter.</h1>
         <p class="mx-auto mt-6 max-w-3xl text-lg leading-7 text-muted sm:text-xl">L’éditeur de bureau gratuit et open source pour créer, relire et modifier vos fichiers .md, puis les exporter en PDF.</p>
         <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a class="inline-flex min-h-12 items-center gap-2 rounded-md bg-accent px-5 py-3 font-semibold text-on-accent no-underline transition-colors hover:bg-accent-hover" href={releaseUrl} target="_blank" rel="noreferrer">
+          <a class="inline-flex min-h-12 items-center gap-2 rounded-md bg-accent px-5 py-3 font-semibold text-on-accent no-underline transition-colors hover:bg-accent-hover" href={downloadsUrl}>
             Télécharger gratuitement <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
           </a>
           <a class="inline-flex min-h-12 items-center gap-2 px-4 py-3 font-medium text-ink underline decoration-transparent underline-offset-4 hover:decoration-current" href={`${basePath}#fonctionnalites`}>
@@ -179,7 +179,7 @@ const faqSchema = {
         <h2 class="display-title max-w-[16ch] text-3xl leading-tight sm:text-4xl">Téléchargez markdim.</h2>
         <p class="mt-4 max-w-[58ch] leading-7 text-muted">Éditeur gratuit et open source. Bêtas publiques pour Windows et Linux; le projet cible aussi macOS. Vérifiez les paquets et notes de version avant l’installation.</p>
       </div>
-      <a class="inline-flex min-h-12 items-center justify-center gap-2 self-start rounded-md bg-accent px-5 py-3 font-semibold text-on-accent no-underline transition-colors hover:bg-accent-hover md:self-center" href={releaseUrl} target="_blank" rel="noreferrer">Télécharger gratuitement <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+      <a class="inline-flex min-h-12 items-center justify-center gap-2 self-start rounded-md bg-accent px-5 py-3 font-semibold text-on-accent no-underline transition-colors hover:bg-accent-hover md:self-center" href={downloadsUrl}>Télécharger gratuitement <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
     </div>
   </section>
 

@@ -59,7 +59,9 @@ body {
 }
 
 a:focus-visible,
-summary:focus-visible {
+summary:focus-visible,
+button:focus-visible,
+select:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 4px;
   border-radius: 3px;
@@ -243,6 +245,14 @@ a {
 
 .download-panel a:focus-visible {
   outline-color: var(--color-accent);
+}
+
+.downloads-retry {
+  border: 0;
+  background: transparent;
+  padding-inline: 0;
+  font: inherit;
+  cursor: pointer;
 }
 
 .skip-link {
