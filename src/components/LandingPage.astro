@@ -14,6 +14,7 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
   : `${import.meta.env.BASE_URL}/`;
 const downloadsUrl = localizePath(basePath, lang, 'downloads');
 const repositoryUrl = 'https://github.com/numera11y/markdim';
+const storeUrl = 'https://apps.microsoft.com/detail/9P28FB0M0J7B';
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -116,13 +117,20 @@ const faqSchema = {
     </div>
   </section>
 
-  <section id="compatibility" class="px-5 pb-16 sm:px-8 sm:pb-20 lg:px-12">
+  <section id="microsoft-store" class="px-5 pb-16 sm:px-8 sm:pb-20 lg:px-12">
     <div class="download-panel mx-auto grid max-w-7xl gap-8 rounded-xl px-6 py-9 sm:px-10 sm:py-12 md:grid-cols-[1fr_auto] md:items-center lg:px-14">
       <div>
-        <h2 class="display-title max-w-[16ch] text-3xl leading-tight sm:text-4xl">{copy.downloadTitle}</h2>
-        <p class="mt-4 max-w-[58ch] leading-7 text-muted">{copy.downloadDescription}</p>
+        <h2 class="display-title max-w-[18ch] text-3xl leading-tight sm:text-4xl">{copy.storeTitle}</h2>
+        <p class="mt-4 max-w-[58ch] leading-7 text-muted">{copy.storeDescription}</p>
       </div>
-      <a class="inline-flex min-h-12 items-center justify-center gap-2 self-start rounded-md bg-accent px-5 py-3 font-semibold text-on-accent no-underline transition-colors hover:bg-accent-hover md:self-center" href={downloadsUrl}>{copy.downloadButton} <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-4 md:justify-end">
+        <a class="store-badge inline-flex min-h-[60px] items-center gap-3 rounded-md px-4 py-2 no-underline transition-colors" href={storeUrl} target="_blank" rel="noreferrer">
+          <img src={`${basePath}microsoft-store.svg`} width="34" height="34" alt="" aria-hidden="true" />
+          <span class="flex flex-col text-left leading-tight"><span class="text-xs">{lang === 'fr' ? 'DISPONIBLE SUR' : 'GET IT FROM'}</span><span class="text-base font-semibold">Microsoft Store</span></span>
+          <i class="ph ph-arrow-up-right ml-1" aria-hidden="true"></i>
+        </a>
+        <a class="inline-flex min-h-11 items-center gap-2 font-medium text-accent underline decoration-transparent underline-offset-4 hover:decoration-current" href={downloadsUrl}>{copy.downloadButton} <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+      </div>
     </div>
   </section>
 

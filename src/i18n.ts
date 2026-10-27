@@ -49,9 +49,9 @@ interface HomeCopy {
   privacyTitle: string;
   privacyText: string;
   sourceCode: string;
-  downloadTitle: string;
-  downloadDescription: string;
   downloadButton: string;
+  storeTitle: string;
+  storeDescription: string;
   faqTitle: string;
   faqs: { question: string; answer: string }[];
   support: string;
@@ -205,9 +205,9 @@ export const siteCopy: Record<Locale, LocaleCopy> = {
       privacyTitle: 'Your files stay yours.',
       privacyText: 'markdim works with local files. No account, cloud sync, or telemetry. Its source code is public under the MIT License.',
       sourceCode: 'View source code',
-      downloadTitle: 'Get markdim.',
-      downloadDescription: 'Free and open source. Public betas for Windows and Linux; the project also targets macOS. Check the available packages and release notes before installing.',
       downloadButton: 'Download free',
+      storeTitle: 'Find markdim on Microsoft Store.',
+      storeDescription: 'Install the Windows app from its official Microsoft Store listing.',
       faqTitle: 'Frequently asked questions.',
       faqs: [
         { question: 'Is markdim free?', answer: 'Yes. markdim is open source under the MIT License, and public beta builds are free to download with no account or subscription.' },
@@ -358,9 +358,9 @@ export const siteCopy: Record<Locale, LocaleCopy> = {
       privacyTitle: 'Vos fichiers restent à vous.',
       privacyText: 'markdim travaille avec vos fichiers locaux. Sans compte, sans synchronisation cloud et sans télémétrie. Son code source est public sous licence MIT.',
       sourceCode: 'Voir le code source',
-      downloadTitle: 'Téléchargez markdim.',
-      downloadDescription: 'Éditeur gratuit et open source. Bêtas publiques pour Windows et Linux; le projet cible aussi macOS. Vérifiez les paquets et notes de version avant l’installation.',
       downloadButton: 'Télécharger gratuitement',
+      storeTitle: 'Retrouvez markdim sur Microsoft Store.',
+      storeDescription: 'Installez l’application Windows depuis sa fiche officielle Microsoft Store.',
       faqTitle: 'Questions fréquentes.',
       faqs: [
         { question: 'markdim est-il gratuit ?', answer: 'Oui. markdim est open source sous licence MIT et les versions bêta sont téléchargeables gratuitement, sans compte ni abonnement.' },
