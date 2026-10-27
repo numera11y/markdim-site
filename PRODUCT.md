@@ -30,6 +30,8 @@ Users open a `.md` or `.markdown` file, or a folder of documents; search and mov
 
 Confirmed capabilities: local files and folders, library search and outline, reorderable tabs, editable Markdown source, live preview, CommonMark and advanced Markdig extensions, code-block highlighting, find/replace, configurable and persistent panels, light/dark themes, source-text zoom with Ctrl+mouse wheel, and PDF export. The application adds no account, cloud synchronization, or telemetry. The public beta is not currently distributed for macOS; do not imply a macOS download is available.
 
+The official website is bilingual: English is the default at `/`; French translations are available under `/fr/`. Home, downloads, and privacy pages have matching localized routes. Keep language switching, canonical URLs, and `hreflang` links in sync when adding site routes.
+
 ## Evidence on Hand
 
 - The application source and current feature list are in the markdim repository: <https://github.com/numera11y/markdim>.

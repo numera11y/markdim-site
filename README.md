@@ -1,17 +1,19 @@
-# markdim — site officiel
+# markdim official website
 
-Site de présentation en français, construit avec Astro, Tailwind CSS 4 et Phosphor. Ce dépôt est indépendant du dépôt de l’application et de ses workflows de release. Les polices IBM Plex sont auto-hébergées pour éviter une dépendance à Google Fonts.
+The official, bilingual marketing website for markdim. English is the default at the site root; French pages live under `/fr/`. Built with Astro, Tailwind CSS 4, and Phosphor icons. IBM Plex fonts are self-hosted; no Google Fonts request is needed.
 
-## Développement
+The site is a separate repository from the desktop app and its release workflows. The downloads page reads public GitHub Releases at runtime, so new releases appear without rebuilding the website.
 
-Prérequis : Node.js 24 et npm.
+## Local development
+
+Requirements: Node.js 22.12 or later and npm.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-## Vérification et build
+## Local checks and production build
 
 ```sh
 npm run check
@@ -19,10 +21,25 @@ npm run build
 npm run preview
 ```
 
-## Publication
+The build creates static files in `dist/` for GitHub Pages.
 
-Le workflow GitHub Actions `.github/workflows/deploy.yml` construit le site et le publie sur GitHub Pages à chaque mise à jour de `main` (source Pages : **GitHub Actions**). Les versions de l’application continuent d’être publiées par le dépôt markdim principal; les boutons de téléchargement de ce site pointent vers ces releases.
+## Languages and routes
 
-URL Pages : <https://numera11y.github.io/markdim-site/>.
+| Page | English (default) | French |
+|---|---|---|
+| Home | `/` | `/fr/` |
+| Downloads | `/downloads/` | `/fr/telechargement/` |
+| Privacy policy | `/privacy/` | `/fr/confidentialite/` |
 
-La page `/telechargement/` charge à chaque visite la liste complète des releases publiques de `numera11y/markdim` via l’API GitHub; les nouvelles versions et préversions apparaissent automatiquement, sans mise à jour manuelle du site.
+Each page has a visible language switcher, canonical URL, and `hreflang` alternate links. Existing French routes `/telechargement/` and `/confidentialite/` redirect to their `/fr/` equivalents.
+
+## Publishing
+
+The GitHub Actions workflow `.github/workflows/deploy.yml` builds the site and deploys it to GitHub Pages on updates to `main` (Pages source: **GitHub Actions**).
+
+Pages URL: <https://numera11y.github.io/markdim-site/>.
+
+## Related projects
+
+- [markdim desktop application](https://github.com/numera11y/markdim)
+- [Latest app releases](https://github.com/numera11y/markdim/releases/latest)

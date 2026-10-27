@@ -1,51 +1,54 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import type { Locale } from '../i18n';
+import { siteCopy } from '../i18n';
 
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const copy = siteCopy[lang].downloads;
 const githubReleasesUrl = 'https://github.com/numera11y/markdim/releases';
 ---
 
-<SiteLayout
-  title="Télécharger markdim — toutes les versions"
-  description="Téléchargez markdim pour Windows et Linux. Retrouvez toutes les versions publiées, bêtas comprises, avec leurs paquets et sommes SHA-256."
->
+<SiteLayout lang={lang} page="downloads">
   <section class="px-5 pb-20 pt-12 sm:px-8 sm:pb-24 sm:pt-16 lg:px-12">
     <div class="mx-auto max-w-7xl">
       <header class="grid gap-6 border-b border-rule pb-8 sm:pb-10 md:grid-cols-[1fr_0.8fr] md:items-end md:gap-16">
-        <h1 class="display-title max-w-[14ch] text-4xl leading-tight sm:text-5xl lg:text-6xl">Versions et téléchargements.</h1>
-        <p class="reading-measure text-base leading-7 text-muted sm:text-lg">
-          Toutes les versions publiées de markdim, bêtas comprises. La liste est synchronisée avec GitHub à chaque visite; seuls les fichiers réellement attachés à une version sont proposés.
-        </p>
+        <h1 class="display-title max-w-[14ch] text-4xl leading-tight sm:text-5xl lg:text-6xl">{copy.heading}</h1>
+        <p class="reading-measure text-base leading-7 text-muted sm:text-lg">{copy.intro}</p>
       </header>
 
       <div class="flex flex-col gap-3 border-b border-rule py-5 sm:flex-row sm:items-center sm:justify-between">
         <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
-          <label class="font-medium" for="platform-filter">Système</label>
+          <label class="font-medium" for="platform-filter">{copy.filterLabel}</label>
           <select
             class="min-h-11 min-w-56 rounded-md border border-rule bg-page px-3 py-2 text-ink focus-visible:outline-3 focus-visible:outline-accent"
             id="platform-filter"
           >
-            <option value="all">Tous les systèmes</option>
-            <option value="windows">Windows</option>
-            <option value="linux">Linux</option>
-            <option value="macos">macOS</option>
+            <option value="all">{copy.allPlatforms}</option>
+            <option value="windows">{copy.windows}</option>
+            <option value="linux">{copy.linux}</option>
+            <option value="macos">{copy.macos}</option>
           </select>
         </div>
         <p class="min-h-6 text-sm text-secondary" id="release-status" role="status" aria-live="polite">
-          Chargement des versions publiées…
+          {copy.loading}
         </p>
       </div>
 
-      <div class="release-ledger" id="release-list" aria-busy="true"></div>
+      <div class="release-ledger" id="release-list" aria-busy="true" data-download-copy={JSON.stringify(copy.dynamic)}></div>
       <noscript>
         <p class="mt-6 leading-7 text-muted">
-          Activez JavaScript pour afficher la liste synchronisée des versions, ou consultez directement les{' '}
-          <a class="text-link" href={githubReleasesUrl}>releases markdim sur GitHub</a>.
+          {copy.noScript}{' '}
+          <a class="text-link" href={githubReleasesUrl}>{copy.githubReleases}</a>.
         </p>
       </noscript>
 
       <p class="reading-measure mt-8 text-sm leading-6 text-secondary">
-        Les fichiers `.sha256` permettent de vérifier l’intégrité du téléchargement. Sur Debian ou Ubuntu, installez le paquet `.deb`; sur les autres distributions Linux, utilisez l’archive portable.{' '}
-        <a class="text-link" href={githubReleasesUrl} target="_blank" rel="noreferrer">Voir les notes de version complètes sur GitHub <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>.
+        {copy.checksumIntro}{' '}
+        <a class="text-link" href={githubReleasesUrl} target="_blank" rel="noreferrer">{copy.fullNotes} <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>.
       </p>
     </div>
   </section>
@@ -68,23 +71,55 @@ const githubReleasesUrl = 'https://github.com/numera11y/markdim/releases';
     };
 
     type Platform = 'windows' | 'linux' | 'macos';
+    type DownloadMessages = {
+      loading: string;
+      preRelease: string;
+      stable: string;
+      published: string;
+      releaseNotes: string;
+      windowsInstaller: string;
+      windowsPortable: string;
+      debianPackage: string;
+      linuxPortable: string;
+      macPortable: string;
+      macInstaller: string;
+      macPackage: string;
+      linuxApp: string;
+      linuxRpm: string;
+      downloadAsset: string;
+      checksum: string;
+      noDesktopAssets: string;
+      noReleases: string;
+      noPlatformReleases: string;
+      countOne: string;
+      countMany: string;
+      platformNames: Record<Platform, string>;
+      requestFailed: string;
+      invalidResponse: string;
+      loadingFailed: string;
+      openAll: string;
+      retry: string;
+      megabytes: string;
+    };
 
+    const pageLocale = document.documentElement.lang === 'fr' ? 'fr-FR' : 'en-US';
     const releasesEndpoint = 'https://api.github.com/repos/numera11y/markdim/releases';
     const filter = document.querySelector<HTMLSelectElement>('#platform-filter');
     const status = document.querySelector<HTMLParagraphElement>('#release-status');
     const list = document.querySelector<HTMLDivElement>('#release-list');
-    const numberFormat = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 1 });
+    const copy = list?.dataset.downloadCopy ? JSON.parse(list.dataset.downloadCopy) as DownloadMessages : null;
+    const numberFormat = new Intl.NumberFormat(pageLocale, { maximumFractionDigits: 1 });
     let releases: PublishedRelease[] = [];
 
-    function makeElement<K extends keyof HTMLElementTagNameMap>(
-      tag: K,
-      className = '',
-      text = '',
-    ): HTMLElementTagNameMap[K] {
+    function makeElement<K extends keyof HTMLElementTagNameMap>(tag: K, className = '', text = ''): HTMLElementTagNameMap[K] {
       const node = document.createElement(tag);
       if (className) node.className = className;
       if (text) node.textContent = text;
       return node;
+    }
+
+    function interpolate(template: string, values: Record<string, string | number>): string {
+      return template.replace(/\{(\w+)\}/g, (_, key: string) => String(values[key] ?? ''));
     }
 
     function platformFor(name: string): Platform | null {
@@ -97,52 +132,53 @@ const githubReleasesUrl = 'https://github.com/numera11y/markdim/releases';
     }
 
     function platformLabel(platform: Platform): string {
-      return { windows: 'Windows', linux: 'Linux', macos: 'macOS' }[platform];
+      return copy?.platformNames[platform] ?? platform;
     }
 
     function assetLabel(asset: ReleaseAsset): string {
+      if (!copy) return asset.name;
       const name = asset.name.toLowerCase();
-      if (name.endsWith('.exe')) return 'Installateur Windows (.exe)';
-      if (name.endsWith('.zip')) return 'Archive portable Windows (.zip)';
+      if (name.endsWith('.exe')) return copy.windowsInstaller;
+      if (name.endsWith('.zip')) return copy.windowsPortable;
       if (name.endsWith('.deb')) {
         const architecture = name.includes('arm64') ? 'ARM64' : 'amd64';
-        return `Paquet Debian / Ubuntu ${architecture} (.deb)`;
+        return interpolate(copy.debianPackage, { architecture });
       }
       if (name.endsWith('.tar.gz')) {
         const architecture = name.includes('arm64') ? 'ARM64' : 'x64';
-        return `Archive portable ${name.includes('linux') ? 'Linux' : 'macOS'} ${architecture} (.tar.gz)`;
+        return interpolate(name.includes('linux') ? copy.linuxPortable : copy.macPortable, { architecture });
       }
-      if (name.endsWith('.dmg')) return 'Installateur macOS (.dmg)';
-      if (name.endsWith('.pkg')) return 'Paquet macOS (.pkg)';
-      if (name.endsWith('.appimage')) return 'Application Linux (.AppImage)';
-      if (name.endsWith('.rpm')) return 'Paquet Linux (.rpm)';
+      if (name.endsWith('.dmg')) return copy.macInstaller;
+      if (name.endsWith('.pkg')) return copy.macPackage;
+      if (name.endsWith('.appimage')) return copy.linuxApp;
+      if (name.endsWith('.rpm')) return copy.linuxRpm;
       return asset.name;
     }
 
     function formatSize(bytes: number): string {
-      return `${numberFormat.format(bytes / 1024 / 1024)} Mo`;
+      return `${numberFormat.format(bytes / 1024 / 1024)} ${copy?.megabytes ?? 'MB'}`;
     }
 
     function formatDate(date: string | null): string {
       if (!date) return '';
-      return new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long' }).format(new Date(date));
+      return new Intl.DateTimeFormat(pageLocale, { dateStyle: 'long' }).format(new Date(date));
     }
 
     function makeAssetRow(asset: ReleaseAsset, checksum: ReleaseAsset | undefined, version: string): HTMLLIElement {
       const row = makeElement('li', 'flex flex-col gap-1 border-t border-rule py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4');
       const download = makeElement('a', 'inline-flex min-h-11 items-center gap-2 font-medium text-accent underline decoration-transparent underline-offset-4 hover:decoration-current');
       download.href = asset.browser_download_url;
-      download.setAttribute('aria-label', `Télécharger ${assetLabel(asset)} pour markdim ${version}`);
+      download.setAttribute('aria-label', interpolate(copy?.downloadAsset ?? 'Download {asset} {version}', { asset: assetLabel(asset), version }));
       download.append(makeElement('span', '', assetLabel(asset)));
       download.append(makeElement('span', 'text-xs text-secondary', formatSize(asset.size)));
       download.append(makeElement('i', 'ph ph-download-simple', ''));
       download.lastElementChild?.setAttribute('aria-hidden', 'true');
       row.append(download);
 
-      if (checksum) {
+      if (checksum && copy) {
         const checksumLink = makeElement('a', 'inline-flex min-h-11 items-center text-sm text-secondary underline decoration-rule underline-offset-4 hover:text-ink');
         checksumLink.href = checksum.browser_download_url;
-        checksumLink.setAttribute('aria-label', `Somme SHA-256 pour ${assetLabel(asset)} ${version}`);
+        checksumLink.setAttribute('aria-label', interpolate(copy.checksum, { asset: assetLabel(asset), version }));
         checksumLink.textContent = 'SHA-256';
         row.append(checksumLink);
       }
@@ -157,14 +193,14 @@ const githubReleasesUrl = 'https://github.com/numera11y/markdim/releases';
       const badge = makeElement(
         'span',
         'rounded-sm border border-rule px-2 py-1 text-xs font-medium text-secondary',
-        release.prerelease ? 'Préversion' : 'Stable',
+        release.prerelease ? copy?.preRelease ?? 'Prerelease' : copy?.stable ?? 'Stable',
       );
       titleLine.append(title, badge);
       heading.append(titleLine);
 
       const date = formatDate(release.published_at);
-      if (date) heading.append(makeElement('p', 'text-sm text-secondary', `Publiée le ${date}`));
-      const notes = makeElement('a', 'inline-flex min-h-11 items-center gap-2 text-sm text-accent underline decoration-transparent underline-offset-4 hover:decoration-current', 'Notes de version');
+      if (date && copy) heading.append(makeElement('p', 'text-sm text-secondary', `${copy.published} ${date}`));
+      const notes = makeElement('a', 'inline-flex min-h-11 items-center gap-2 text-sm text-accent underline decoration-transparent underline-offset-4 hover:decoration-current', copy?.releaseNotes ?? 'Release notes');
       notes.href = release.html_url;
       notes.target = '_blank';
       notes.rel = 'noreferrer';
@@ -200,15 +236,15 @@ const githubReleasesUrl = 'https://github.com/numera11y/markdim/releases';
         packages.append(group);
       }
 
-      if (!packages.childElementCount) {
-        packages.append(makeElement('p', 'leading-6 text-muted', 'Aucun paquet pour ordinateur n’est joint à cette release. Consultez les notes de version.'));
+      if (!packages.childElementCount && copy) {
+        packages.append(makeElement('p', 'leading-6 text-muted', copy.noDesktopAssets));
       }
       article.append(packages);
       return article;
     }
 
     function renderReleases(): void {
-      if (!list || !filter || !status) return;
+      if (!list || !filter || !status || !copy) return;
       const selectedPlatform = filter.value;
       const visible = releases.filter(release => {
         if (selectedPlatform === 'all') return true;
@@ -219,11 +255,13 @@ const githubReleasesUrl = 'https://github.com/numera11y/markdim/releases';
 
       if (!visible.length) {
         const message = selectedPlatform === 'all'
-          ? 'Aucune version publiée pour le moment.'
-          : `Aucune version publiée avec un téléchargement ${platformLabel(selectedPlatform as Platform)} pour le moment.`;
+          ? copy.noReleases
+          : interpolate(copy.noPlatformReleases, { platform: platformLabel(selectedPlatform as Platform) });
         list.append(makeElement('p', 'border-t border-rule py-6 leading-7 text-muted', message));
       }
-      status.textContent = `${numberFormat.format(visible.length)} version${visible.length === 1 ? '' : 's'} affichée${visible.length === 1 ? '' : 's'}`;
+      status.textContent = visible.length === 1
+        ? copy.countOne
+        : interpolate(copy.countMany, { count: numberFormat.format(visible.length) });
     }
 
     async function loadReleases(): Promise<PublishedRelease[]> {
@@ -231,9 +269,9 @@ const githubReleasesUrl = 'https://github.com/numera11y/markdim/releases';
       let page = 1;
       while (true) {
         const response = await fetch(`${releasesEndpoint}?per_page=100&page=${page}`);
-        if (!response.ok) throw new Error(`GitHub a répondu avec le statut ${response.status}.`);
+        if (!response.ok) throw new Error(interpolate(copy?.requestFailed ?? 'GitHub returned status {status}.', { status: response.status }));
         const batch = await response.json() as PublishedRelease[];
-        if (!Array.isArray(batch)) throw new Error('La réponse GitHub ne contient pas une liste de releases.');
+        if (!Array.isArray(batch)) throw new Error(copy?.invalidResponse ?? 'GitHub returned an invalid release list.');
         allReleases.push(...batch.filter(release => !release.draft));
         if (batch.length < 100) break;
         page++;
@@ -242,8 +280,8 @@ const githubReleasesUrl = 'https://github.com/numera11y/markdim/releases';
     }
 
     async function refreshReleases(): Promise<void> {
-      if (!status || !list) return;
-      status.replaceChildren(makeElement('span', '', 'Chargement des versions publiées…'));
+      if (!status || !list || !copy) return;
+      status.replaceChildren(makeElement('span', '', copy.loading));
       list.setAttribute('aria-busy', 'true');
       try {
         releases = await loadReleases();
@@ -251,19 +289,20 @@ const githubReleasesUrl = 'https://github.com/numera11y/markdim/releases';
       } catch {
         list.replaceChildren();
         list.setAttribute('aria-busy', 'false');
-        status.textContent = 'Impossible de charger les versions pour le moment.';
-        const fallback = makeElement('a', 'mt-3 inline-flex min-h-11 items-center gap-2 text-accent underline decoration-transparent underline-offset-4 hover:decoration-current', 'Ouvrir toutes les releases sur GitHub');
-        fallback.href = 'https://github.com/numera11y/markdim/releases';
+        status.textContent = copy.loadingFailed;
+        const fallback = makeElement('a', 'mt-3 inline-flex min-h-11 items-center gap-2 text-accent underline decoration-transparent underline-offset-4 hover:decoration-current', copy.openAll);
+        fallback.href = releasesPage;
         fallback.target = '_blank';
         fallback.rel = 'noreferrer';
         list.append(fallback);
-        const retry = makeElement('button', 'downloads-retry mt-3 inline-flex min-h-11 items-center text-accent underline decoration-transparent underline-offset-4 hover:decoration-current', 'Réessayer');
+        const retry = makeElement('button', 'downloads-retry mt-3 inline-flex min-h-11 items-center text-accent underline decoration-transparent underline-offset-4 hover:decoration-current', copy.retry);
         retry.type = 'button';
         retry.addEventListener('click', () => void refreshReleases());
         list.append(retry);
       }
     }
 
+    const releasesPage = 'https://github.com/numera11y/markdim/releases';
     filter?.addEventListener('change', renderReleases);
     void refreshReleases();
   </script>

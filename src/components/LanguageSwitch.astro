@@ -1,0 +1,30 @@
+---
+import type { Locale } from '../i18n';
+import { siteCopy } from '../i18n';
+
+interface Props {
+  lang: Locale;
+  englishHref: string;
+  frenchHref: string;
+  variant: 'desktop' | 'mobile';
+}
+
+const { lang, englishHref, frenchHref, variant } = Astro.props;
+const copy = siteCopy[lang].layout;
+---
+
+<div class:list={['language-switch', `${variant}-language-switch`]} role="group" aria-label={copy.languageSelector}>
+  <a
+    href={englishHref}
+    lang="en"
+    aria-label={copy.switchToEnglish}
+    aria-current={lang === 'en' ? 'page' : undefined}
+  >EN</a>
+  <span aria-hidden="true">/</span>
+  <a
+    href={frenchHref}
+    lang="fr"
+    aria-label={copy.switchToFrench}
+    aria-current={lang === 'fr' ? 'page' : undefined}
+  >FR</a>
+</div>

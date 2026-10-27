@@ -1,0 +1,51 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import type { Locale } from '../i18n';
+import { siteCopy } from '../i18n';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const copy = siteCopy[lang].privacy;
+const updatedAt = lang === 'fr' ? '27 octobre 2026' : 'October 27, 2026';
+const contactEmail = 'contact@numera11y.fr';
+const microsoftPrivacyUrl = 'https://privacy.microsoft.com/privacystatement';
+const repositoryUrl = 'https://github.com/numera11y/markdim';
+---
+
+<SiteLayout lang={lang} page="privacy">
+  <section class="px-5 pb-20 pt-12 sm:px-8 sm:pb-24 sm:pt-16 lg:px-12">
+    <article class="mx-auto max-w-4xl">
+      <header class="border-b border-rule pb-8 sm:pb-10">
+        <h1 class="display-title max-w-[16ch] text-4xl leading-tight sm:text-5xl lg:text-6xl">{copy.heading}</h1>
+        <p class="mt-5 text-sm text-secondary">{copy.updatedLabel} <time datetime="2026-10-27">{updatedAt}</time></p>
+        <p class="reading-measure mt-5 text-lg leading-7 text-muted">{copy.intro}</p>
+      </header>
+
+      <div class="divide-y divide-rule">
+        {copy.sections.map((section) => (
+          <section class="py-7 sm:py-8">
+            <h2 class="display-title text-2xl leading-tight sm:text-3xl">{section.title}</h2>
+            {section.paragraphs.map((paragraph, index) => (
+              <p class="reading-measure mt-4 leading-7 text-muted">
+                {paragraph}{' '}
+                {section.contactEmail && index === section.paragraphs.length - 1 && <a class="text-link" href={`mailto:${contactEmail}`}>{contactEmail}</a>}
+                {section.externalPolicy && index === section.paragraphs.length - 1 && <a class="text-link" href={microsoftPrivacyUrl} target="_blank" rel="noreferrer">{section.externalPolicy}</a>}
+                {section.externalRepository && index === section.paragraphs.length - 1 && <a class="text-link" href={repositoryUrl} target="_blank" rel="noreferrer">{section.externalRepository}</a>}
+                {index === section.paragraphs.length - 1 && section.after}
+              </p>
+            ))}
+            {section.bullets && (
+              <ul class="reading-measure mt-4 list-disc space-y-3 pl-5 leading-7 text-muted">
+                {section.bullets.map((bullet) => <li>{bullet}</li>)}
+              </ul>
+            )}
+            {section.after && section.paragraphs.length === 0 && <p class="reading-measure mt-4 leading-7 text-muted">{section.after}</p>}
+          </section>
+        ))}
+      </div>
+    </article>
+  </section>
+</SiteLayout>
