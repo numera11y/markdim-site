@@ -40,12 +40,6 @@ const faqs = [
     question: 'Comment agrandir le texte de la source ?',
     answer: 'Maintenez Ctrl et faites tourner la molette pour zoomer dans le texte de l’éditeur, sans modifier le fichier.',
   },
-  {
-    question: 'En quoi markdim diffère de MDViewer ?',
-    answer: 'Les deux ouvrent, éditent et exportent des fichiers Markdown. MDViewer est distribué via le Microsoft Store pour Windows. markdim publie son code sous MIT, propose une bêta publique Linux en plus de Windows et permet de régler les panneaux bibliothèque, éditeur et aperçu.',
-    link: 'https://apps.microsoft.com/detail/9NXLXLZ198SK',
-    linkLabel: 'Voir la fiche officielle de MDViewer',
-  },
 ];
 
 const faqSchema = {
@@ -187,11 +181,10 @@ const faqSchema = {
     <div class="mx-auto grid max-w-7xl gap-9 md:grid-cols-[0.7fr_1.3fr] md:gap-16">
       <h2 class="display-title max-w-[11ch] text-4xl leading-tight sm:text-5xl">Questions fréquentes.</h2>
       <div>
-        {faqs.map(({ question, answer, link, linkLabel }) => (
+        {faqs.map(({ question, answer }) => (
           <details class="faq-item group">
             <summary class="text-base font-medium sm:text-lg">{question}</summary>
             <p class="faq-answer">{answer}</p>
-            {link && <p class="faq-answer -mt-4"><a class="text-link" href={link} target="_blank" rel="noreferrer">{linkLabel} <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></p>}
           </details>
         ))}
         <p class="mt-6 text-sm leading-6 text-secondary">Un doute sur une version ou un problème rencontré ? <a class="text-link" href={`${repositoryUrl}/issues`} target="_blank" rel="noreferrer">Écrivez-nous sur GitHub <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>.</p>

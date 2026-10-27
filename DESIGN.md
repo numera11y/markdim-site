@@ -181,7 +181,7 @@ Corners remain controlled rather than pill-shaped: actions and menu trigger use 
 
 ### FAQ
 - **Style:** native `details` rows with thin top/bottom rules and 60px minimum question height.
-- **State:** blue plus changes to minus when open; answers use muted text, 1.7 leading, and a 68ch maximum measure. The MDViewer comparison remains a factual FAQ answer, not a visual endorsement pattern.
+- **State:** blue plus changes to minus when open; answers use muted text, 1.7 leading, and a 68ch maximum measure.
 
 ### Application Capture
 - **Style:** genuine dark-mode application screenshot in a 12px clipped frame with a slate border, broad shadow, and subtle inset highlight.
@@ -206,5 +206,4 @@ Corners remain controlled rather than pill-shaped: actions and menu trigger use 
 - **Don't** reintroduce the previous light paper/editorial palette.
 - **Don't** fabricate an application screenshot or imply a macOS beta package is currently published.
 - **Don't** position AI as the product's main purpose.
-- **Don't** turn the factual MDViewer comparison into a claim that markdim alone can edit or export Markdown.
 - **Don't** remove the animated route or make motion ignore reduced-motion preferences.
